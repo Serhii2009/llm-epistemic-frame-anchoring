@@ -14,7 +14,7 @@ DTG_PATH = Path(__file__).parent.parent / "data" / "dtg_300.json"
 # Thresholds
 FRAME_MAP_THRESHOLD = 0.40      # min cosine sim for frame → DTG node activation
 FRAME_MAP_TOP_K = 5             # max activated nodes
-DTG_K_HOPS = 2                  # BFS radius for activation footprint
+DTG_K_HOPS = 1                  # BFS radius for activation footprint (k=2 covers all 61 nodes)
 K_GAPS = 3                      # coverage gaps to explore per request
 CONTAMINATION_THRESHOLD_SP = 0.70   # S(P) contamination: sim(S(P), F) < this
 CONTAMINATION_THRESHOLD_RESP = 0.50  # response contamination: sim(R, F) > this
