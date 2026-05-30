@@ -53,13 +53,7 @@ class CausalStructureProbe:
                 "Does this concept satisfy any one of the causal criteria?"
             )
             try:
-                raw = self._llm.complete(
-                    prompt,
-                    system=_SYSTEM,
-                    json_mode=True,
-                    temperature=0.1,
-                )
-                result = json.loads(raw)
+                result = self._llm.complete_json(prompt, system=_SYSTEM)
                 if result.get("passes", False):
                     passed.append(dc)
             except (json.JSONDecodeError, Exception):

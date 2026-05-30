@@ -70,13 +70,10 @@ class MetaEpistemicAnalyzer:
                 if attempt > 0 else ""
             )
             try:
-                raw = self._llm.complete(
+                parsed = self._llm.complete_json(
                     prompt + stronger_instruction,
                     system=_SYSTEM,
-                    json_mode=True,
-                    temperature=0.2,
                 )
-                parsed = json.loads(raw)
             except (json.JSONDecodeError, Exception):
                 continue
 

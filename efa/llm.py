@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Optional
 
@@ -38,9 +39,30 @@ class LLMClient:
         resp = self._client.chat.completions.create(**kwargs)
         return resp.choices[0].message.content or ""
 
+    @staticmethod
+    def _extract_json(text: str) -> str:
+        """Strip markdown code fences and extract the first JSON object/array."""
+        # Remove ```json ... ``` or ``` ... ``` wrappers
+        text = re.sub(r"^```(?:json)?\s*", "", text.strip(), flags=re.IGNORECASE)
+        text = re.sub(r"```\s*$", "", text.strip())
+        # Find first { or [ and match to closing } or ]
+        for start_char, end_char in [('{', '}'), ('[', ']')]:
+            start = text.find(start_char)
+            if start != -1:
+                # Find the matching close bracket
+                depth = 0
+                for i, ch in enumerate(text[start:], start):
+                    if ch == start_char:
+                        depth += 1
+                    elif ch == end_char:
+                        depth -= 1
+                        if depth == 0:
+                            return text[start:i + 1]
+        return text.strip()
+
     def complete_json(self, prompt: str, system: Optional[str] = None) -> dict:
         raw = self.complete(prompt, system=system, json_mode=True, temperature=0.2)
-        return json.loads(raw)
+        return json.loads(self._extract_json(raw))
 
     def complete_parallel(
         self,
