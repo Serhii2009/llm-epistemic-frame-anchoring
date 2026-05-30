@@ -16,25 +16,29 @@ from efa.llm import LLMClient
 _SYSTEM = """\
 You are an analytical assistant. Your task is to separate a problem statement into two components:
 
-1. FRAME: the disciplinary vocabulary, ontological assumptions, and domain commitments encoded in the prompt
-2. SKELETON: a frame-independent structural description of the actual problem — stated in neutral terms without the original domain vocabulary
+1. FRAME: the DISCIPLINE being applied to analyze or solve the problem — the conceptual lens, methodology, or professional field from which the problem is being approached. This is NOT the subject matter; it is the analytic tradition.
+   Example: "How do I reduce employee turnover in my engineering team?" — the FRAME is "management/HR" (the discipline applied), NOT "software engineering" (the subject of the team).
+   Example: "How do I fix a memory leak in my Python code?" — the FRAME is "software engineering".
+
+2. SKELETON: a frame-independent structural description of the actual problem — stated in neutral terms without the original domain vocabulary.
 
 Return ONLY valid JSON in this exact schema:
 {
-  "frame_summary": "brief description of the frame's disciplinary commitments",
-  "frame_concepts": ["key concept 1", "key concept 2", "..."],
+  "frame_summary": "one-sentence description of the discipline/field being applied (e.g., 'software engineering practices', 'HR management')",
+  "frame_concepts": ["key concept 1", "key concept 2"],
   "skeleton": {
-    "goals": ["what needs to be achieved"],
-    "constraints": ["what cannot be violated"],
-    "entities": ["core objects, agents, or systems involved"],
+    "goals": ["what outcome needs to be achieved, in neutral language"],
+    "constraints": ["what cannot be violated or changed"],
+    "entities": ["the core agents, systems, or resources involved — described functionally, not by domain label"],
     "success_criteria": ["how you would know the problem is solved"]
   }
 }
 
 Rules for the skeleton:
-- Do NOT use vocabulary from the frame's domain
-- Describe goals/constraints in the most general terms possible
-- If an entity is domain-specific (e.g., "API endpoint"), re-describe it functionally (e.g., "communication interface")
+- Do NOT use the discipline-specific vocabulary from the frame
+- Describe goals/constraints in the most general functional terms
+- "engineering team" → "skilled technical contributors"; "API" → "interface"; "database" → "persistent data store"
+- The skeleton should read as a problem description a generalist could understand
 """
 
 
