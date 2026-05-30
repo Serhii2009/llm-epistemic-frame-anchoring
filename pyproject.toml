@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "efa-toolkit"
+version = "0.1.0"
+description = "Epistemic Frame Anchoring — Coverage Architecture for LLMs"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.30.0",
+    "sentence-transformers>=3.0.0",
+    "torch>=2.0.0",
+    "networkx>=3.0",
+    "spacy>=3.7.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "numpy>=1.24.0",
+]
+
+[project.scripts]
+build-dtg = "scripts.build_dtg:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["efa*", "scripts*"]

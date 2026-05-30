@@ -1,0 +1,11 @@
+RESEARCH_DESIGN_DOCUMENT.md
+.venv
+.env
+__pycache__/
+*.pyc
+*.pyo
+data/dtg_partial.json
+*.egg-info/
+dist/
+build/
+.pytest_cache/
