@@ -26,19 +26,28 @@ from efa.llm import LLMClient
 from efa.pipeline.verify import CoverageVerifier
 
 
-PROBLEM = "How do I reduce employee turnover in my engineering team?"
+# Chosen because frame (software/ML) is far from expected outside-frame domains
+# (physics, biology, philosophy of science, complexity theory).
+# A pure ML practitioner wouldn't naturally reach for these — they are genuine EFA test cases.
+PROBLEM = (
+    "My machine learning model achieves 98% accuracy on training data "
+    "but only 62% on new test data. I've tried increasing the training dataset "
+    "size but it doesn't help. How do I fix this overfitting problem?"
+)
 
 EXPECTED_OUTSIDE_FRAME = [
-    "organizational psychology",
-    "job characteristics model",
-    "self-determination theory",
-    "incentive design",
-    "intrinsic motivation",
-    "autonomy",
-    "psychological safety",
-    "herzberg two-factor theory",
-    "exit interview",
-    "employee engagement",
+    "Occam's razor",
+    "parsimony",
+    "Kolmogorov complexity",
+    "minimum description length",
+    "falsifiability",
+    "variance-bias tradeoff",
+    "generalization",
+    "selection pressure",
+    "entropy",
+    "information theory",
+    "phase transition",
+    "complexity",
 ]
 
 
