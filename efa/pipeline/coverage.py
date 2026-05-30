@@ -21,8 +21,16 @@ class CoverageEstimator:
             gap_nodes:       top-k unactivated nodes ranked by relevance to S(P)
             footprint:       full activation footprint (node IDs)
         """
+        # Use extracted frame summary if available; fall back to raw prompt.
+        # The summary ("HR management") maps to correct domains;
+        # the raw prompt ("engineering team") activates wrong technical domains.
+        frame_for_mapping = (
+            mea_result.frame_summary
+            if mea_result.frame_summary
+            else mea_result.frame_text
+        )
         activated = self._dtg.map_frame(
-            mea_result.frame_text,
+            frame_for_mapping,
             top_k=FRAME_MAP_TOP_K,
         )
 
