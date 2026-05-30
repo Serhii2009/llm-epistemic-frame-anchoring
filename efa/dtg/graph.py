@@ -143,7 +143,11 @@ class DTG:
             # Semantic alignment with problem skeleton
             sp_alignment = max(0.0, float(sp_vec @ node.embedding))
 
-            score = edge_weight * sp_alignment
+            # Score: edge_weight × sp_alignment, with a floor of 0.1 on edge_weight
+            # so that all nodes with sp_alignment > 0 are ranked even when the DTG
+            # has sparse edges (common for v1 with S2 co-occurrence filtering).
+            effective_edge = max(edge_weight, 0.1)
+            score = effective_edge * sp_alignment
             if score > 0:
                 scored.append((score, node))
 

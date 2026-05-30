@@ -1,0 +1,7436 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "built_at": "2026-05-30T18:31:59.130516+00:00",
+    "node_count": 61,
+    "edge_count": 1176,
+    "min_weight": 0.03,
+    "source": "OECD FORD taxonomy + Semantic Scholar co-occurrence"
+  },
+  "nodes": [
+    {
+      "id": "nat_math",
+      "domain": "Mathematics",
+      "division": "Natural Sciences",
+      "description": "Pure and applied mathematics, statistics, probability theory, numerical analysis, topology"
+    },
+    {
+      "id": "nat_cs",
+      "domain": "Computer and Information Sciences",
+      "division": "Natural Sciences",
+      "description": "Computer science, information systems, software systems, programming languages, algorithms"
+    },
+    {
+      "id": "nat_phys",
+      "domain": "Physical Sciences",
+      "division": "Natural Sciences",
+      "description": "Physics, astronomy, astrophysics, nuclear physics, optics, quantum mechanics, condensed matter"
+    },
+    {
+      "id": "nat_chem",
+      "domain": "Chemical Sciences",
+      "division": "Natural Sciences",
+      "description": "Chemistry, organic chemistry, inorganic chemistry, physical chemistry, analytical chemistry, electrochemistry"
+    },
+    {
+      "id": "nat_earth",
+      "domain": "Earth and Environmental Sciences",
+      "division": "Natural Sciences",
+      "description": "Geology, geophysics, meteorology, oceanography, climate science, atmospheric science, environmental science"
+    },
+    {
+      "id": "nat_bio",
+      "domain": "Biological Sciences",
+      "division": "Natural Sciences",
+      "description": "Biology, ecology, evolutionary biology, genetics, molecular biology, botany, zoology, microbiology"
+    },
+    {
+      "id": "eng_civil",
+      "domain": "Civil Engineering",
+      "division": "Engineering and Technology",
+      "description": "Structural engineering, transportation systems, construction, geotechnical engineering, hydraulics, urban infrastructure"
+    },
+    {
+      "id": "eng_elec",
+      "domain": "Electrical and Electronic Engineering",
+      "division": "Engineering and Technology",
+      "description": "Electrical engineering, electronics, telecommunications, power systems, signal processing, control systems"
+    },
+    {
+      "id": "eng_mech",
+      "domain": "Mechanical Engineering",
+      "division": "Engineering and Technology",
+      "description": "Mechanical engineering, thermodynamics, fluid mechanics, manufacturing processes, tribology, vibration"
+    },
+    {
+      "id": "eng_chem",
+      "domain": "Chemical Engineering",
+      "division": "Engineering and Technology",
+      "description": "Process engineering, reaction engineering, separation processes, chemical process design, catalysis"
+    },
+    {
+      "id": "eng_mat",
+      "domain": "Materials Engineering",
+      "division": "Engineering and Technology",
+      "description": "Materials science, metallurgy, polymers, ceramics, composites, nanomaterials, surface engineering"
+    },
+    {
+      "id": "eng_med",
+      "domain": "Medical Engineering",
+      "division": "Engineering and Technology",
+      "description": "Biomedical engineering, medical devices, prosthetics, diagnostic imaging, tissue engineering, biomechanics"
+    },
+    {
+      "id": "eng_env",
+      "domain": "Environmental Engineering",
+      "division": "Engineering and Technology",
+      "description": "Pollution control, waste management, water treatment, environmental remediation, sustainable infrastructure"
+    },
+    {
+      "id": "eng_nano",
+      "domain": "Nano-technology",
+      "division": "Engineering and Technology",
+      "description": "Nanotechnology, nanofabrication, nanoelectronics, nanomedicine, self-assembly, quantum dots"
+    },
+    {
+      "id": "eng_soft",
+      "domain": "Software Engineering",
+      "division": "Engineering and Technology",
+      "description": "Software development methodology, system architecture, DevOps, agile development, software testing, reliability"
+    },
+    {
+      "id": "eng_aero",
+      "domain": "Aerospace Engineering",
+      "division": "Engineering and Technology",
+      "description": "Aeronautics, astronautics, flight dynamics, propulsion systems, spacecraft design, avionics"
+    },
+    {
+      "id": "eng_robot",
+      "domain": "Robotics",
+      "division": "Engineering and Technology",
+      "description": "Robot design, kinematics, autonomous systems, actuators, sensors, robotic process automation"
+    },
+    {
+      "id": "med_basic",
+      "domain": "Basic Medicine",
+      "division": "Medical and Health Sciences",
+      "description": "Anatomy, physiology, pharmacology, pathology, immunology, microbiology, biochemistry"
+    },
+    {
+      "id": "med_clinical",
+      "domain": "Clinical Medicine",
+      "division": "Medical and Health Sciences",
+      "description": "Medical practice, surgery, cardiology, oncology, psychiatry, internal medicine, neurology, pediatrics"
+    },
+    {
+      "id": "med_health",
+      "domain": "Health Sciences",
+      "division": "Medical and Health Sciences",
+      "description": "Public health, epidemiology, health policy, occupational health, nutrition science, preventive medicine"
+    },
+    {
+      "id": "med_biotech",
+      "domain": "Medical Biotechnology",
+      "division": "Medical and Health Sciences",
+      "description": "Genomics, proteomics, drug development, gene therapy, diagnostics, personalized medicine"
+    },
+    {
+      "id": "med_nursing",
+      "domain": "Nursing and Allied Health",
+      "division": "Medical and Health Sciences",
+      "description": "Nursing science, allied health, patient care quality, healthcare management, rehabilitation"
+    },
+    {
+      "id": "agr_main",
+      "domain": "Agriculture, Forestry and Fisheries",
+      "division": "Agricultural Sciences",
+      "description": "Crop science, agronomy, soil science, forestry, aquaculture, horticulture, agroecology"
+    },
+    {
+      "id": "agr_animal",
+      "domain": "Animal and Dairy Science",
+      "division": "Agricultural Sciences",
+      "description": "Animal husbandry, livestock production, dairy science, animal nutrition, poultry science"
+    },
+    {
+      "id": "agr_vet",
+      "domain": "Veterinary Science",
+      "division": "Agricultural Sciences",
+      "description": "Veterinary medicine, animal disease, zoonotic diseases, food safety, wildlife health"
+    },
+    {
+      "id": "agr_biotech",
+      "domain": "Agricultural Biotechnology",
+      "division": "Agricultural Sciences",
+      "description": "GM crops, plant genetics, precision agriculture, agricultural genomics, biopesticides"
+    },
+    {
+      "id": "soc_psych",
+      "domain": "Psychology",
+      "division": "Social Sciences",
+      "description": "Cognitive psychology, behavioral psychology, clinical psychology, social psychology, developmental psychology"
+    },
+    {
+      "id": "soc_econ",
+      "domain": "Economics and Business",
+      "division": "Social Sciences",
+      "description": "Microeconomics, macroeconomics, finance, accounting, management science, entrepreneurship, market design"
+    },
+    {
+      "id": "soc_edu",
+      "domain": "Educational Sciences",
+      "division": "Social Sciences",
+      "description": "Pedagogy, curriculum design, learning theory, educational psychology, higher education, instructional design"
+    },
+    {
+      "id": "soc_soc",
+      "domain": "Sociology",
+      "division": "Social Sciences",
+      "description": "Social structures, institutions, culture, social movements, stratification, inequality, demography"
+    },
+    {
+      "id": "soc_law",
+      "domain": "Law",
+      "division": "Social Sciences",
+      "description": "Legal theory, international law, constitutional law, criminal law, regulatory law, jurisprudence"
+    },
+    {
+      "id": "soc_poli",
+      "domain": "Political Science",
+      "division": "Social Sciences",
+      "description": "Political theory, comparative politics, international relations, public policy, governance, elections"
+    },
+    {
+      "id": "soc_geo",
+      "domain": "Social and Economic Geography",
+      "division": "Social Sciences",
+      "description": "Urban geography, economic geography, regional science, human geography, spatial analysis"
+    },
+    {
+      "id": "soc_media",
+      "domain": "Media and Communications",
+      "division": "Social Sciences",
+      "description": "Journalism, media studies, communication theory, digital media, rhetoric, public relations"
+    },
+    {
+      "id": "soc_anth",
+      "domain": "Anthropology",
+      "division": "Social Sciences",
+      "description": "Cultural anthropology, social anthropology, ethnography, archaeology, linguistic anthropology"
+    },
+    {
+      "id": "hum_hist",
+      "domain": "History and Archaeology",
+      "division": "Humanities",
+      "description": "Historical analysis, archival research, historiography, classical archaeology, cultural heritage"
+    },
+    {
+      "id": "hum_lang",
+      "domain": "Languages and Literature",
+      "division": "Humanities",
+      "description": "Linguistics, literary theory, comparative literature, translation studies, philology, rhetoric"
+    },
+    {
+      "id": "hum_phil",
+      "domain": "Philosophy, Ethics and Religion",
+      "division": "Humanities",
+      "description": "Epistemology, ethics, metaphysics, logic, philosophy of mind, philosophy of science, religious studies"
+    },
+    {
+      "id": "hum_arts",
+      "domain": "Arts",
+      "division": "Humanities",
+      "description": "Visual arts, performing arts, music, design history, film studies, aesthetics, cultural studies"
+    },
+    {
+      "id": "cross_cogni",
+      "domain": "Cognitive Science",
+      "division": "Cross-Disciplinary",
+      "description": "Cognition, decision-making, mental representation, perception, language processing, embodied cognition"
+    },
+    {
+      "id": "cross_neuro",
+      "domain": "Neuroscience",
+      "division": "Cross-Disciplinary",
+      "description": "Brain function, neural circuits, computational neuroscience, neuroimaging, neuroplasticity, connectomics"
+    },
+    {
+      "id": "cross_datasi",
+      "domain": "Data Science",
+      "division": "Cross-Disciplinary",
+      "description": "Statistical modeling, machine learning, data mining, big data analytics, data visualization, feature engineering"
+    },
+    {
+      "id": "cross_bioinf",
+      "domain": "Bioinformatics",
+      "division": "Cross-Disciplinary",
+      "description": "Sequence analysis, computational biology, genomics analysis, structural bioinformatics, systems genomics"
+    },
+    {
+      "id": "cross_beheco",
+      "domain": "Behavioral Economics",
+      "division": "Cross-Disciplinary",
+      "description": "Cognitive biases, heuristics, nudge theory, bounded rationality, prospect theory, loss aversion"
+    },
+    {
+      "id": "cross_sysbi",
+      "domain": "Systems Biology",
+      "division": "Cross-Disciplinary",
+      "description": "Biological networks, gene regulatory networks, multi-omics integration, synthetic biology, metabolomics"
+    },
+    {
+      "id": "cross_sustain",
+      "domain": "Sustainability Science",
+      "division": "Cross-Disciplinary",
+      "description": "Climate adaptation, circular economy, sustainable development, energy transition, life cycle assessment"
+    },
+    {
+      "id": "cross_urban",
+      "domain": "Urban Studies",
+      "division": "Cross-Disciplinary",
+      "description": "Urban planning, smart cities, urbanization dynamics, city governance, housing, urban mobility"
+    },
+    {
+      "id": "cross_hci",
+      "domain": "Human-Computer Interaction",
+      "division": "Cross-Disciplinary",
+      "description": "User experience design, usability engineering, interface design, human factors, accessibility"
+    },
+    {
+      "id": "cross_network",
+      "domain": "Network Science",
+      "division": "Cross-Disciplinary",
+      "description": "Complex networks, graph theory applications, social network analysis, scale-free networks, percolation"
+    },
+    {
+      "id": "cross_complex",
+      "domain": "Complexity Science",
+      "division": "Cross-Disciplinary",
+      "description": "Complex adaptive systems, emergence, chaos theory, agent-based modeling, self-organization"
+    },
+    {
+      "id": "cross_orgbeh",
+      "domain": "Organizational Behavior",
+      "division": "Cross-Disciplinary",
+      "description": "Leadership, team dynamics, organizational culture, motivation theory, workplace psychology, change management"
+    },
+    {
+      "id": "cross_decision",
+      "domain": "Decision Science",
+      "division": "Cross-Disciplinary",
+      "description": "Decision theory, risk analysis, game theory, operations research, multi-criteria analysis"
+    },
+    {
+      "id": "cross_infosci",
+      "domain": "Information Science",
+      "division": "Cross-Disciplinary",
+      "description": "Knowledge organization, information retrieval, ontology engineering, library science, semantic web"
+    },
+    {
+      "id": "cross_cyber",
+      "domain": "Cybersecurity",
+      "division": "Cross-Disciplinary",
+      "description": "Information security, cryptography, network security, privacy engineering, threat modeling, zero trust"
+    },
+    {
+      "id": "cross_ai",
+      "domain": "Artificial Intelligence",
+      "division": "Cross-Disciplinary",
+      "description": "Machine learning, deep learning, natural language processing, computer vision, AI safety, reinforcement learning"
+    },
+    {
+      "id": "cross_quantum",
+      "domain": "Quantum Computing",
+      "division": "Cross-Disciplinary",
+      "description": "Quantum algorithms, quantum hardware, quantum error correction, quantum cryptography, quantum information"
+    },
+    {
+      "id": "cross_sts",
+      "domain": "Science and Technology Studies",
+      "division": "Cross-Disciplinary",
+      "description": "Sociology of science, technology ethics, innovation policy, responsible innovation, research evaluation"
+    },
+    {
+      "id": "cross_epidem",
+      "domain": "Epidemiology",
+      "division": "Cross-Disciplinary",
+      "description": "Disease surveillance, causal inference in health, clinical trials, population health, biostatistics"
+    },
+    {
+      "id": "cross_fintech",
+      "domain": "Financial Technology",
+      "division": "Cross-Disciplinary",
+      "description": "Digital payments, blockchain applications, algorithmic trading, insurtech, decentralized finance"
+    },
+    {
+      "id": "cross_logistics",
+      "domain": "Logistics and Supply Chain",
+      "division": "Cross-Disciplinary",
+      "description": "Supply chain management, operations management, inventory optimization, last-mile delivery"
+    },
+    {
+      "id": "cross_design",
+      "domain": "Design Thinking",
+      "division": "Cross-Disciplinary",
+      "description": "Human-centered design, service design, industrial design methodology, UX research, design sprint"
+    }
+  ],
+  "edges": [
+    {
+      "source": "nat_math",
+      "target": "nat_cs",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "nat_math",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "nat_phys",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "nat_math",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "nat_chem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_chem",
+      "target": "nat_math",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "nat_earth",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_earth",
+      "target": "nat_math",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "nat_bio",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "nat_math",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "eng_nano",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "nat_math",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "eng_aero",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "nat_math",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "soc_law",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "nat_math",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "soc_geo",
+      "weight": 0.03,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "nat_math",
+      "weight": 0.03,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "nat_math",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "cross_bioinf",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "nat_math",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "cross_urban",
+      "weight": 0.03,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "nat_math",
+      "weight": 0.03,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "nat_math",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "cross_complex",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "nat_math",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "cross_decision",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "nat_math",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_math",
+      "target": "cross_quantum",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "nat_math",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "nat_phys",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "nat_cs",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "nat_chem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_chem",
+      "target": "nat_cs",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "nat_earth",
+      "weight": 0.3312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_earth",
+      "target": "nat_cs",
+      "weight": 0.3312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "nat_bio",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "nat_cs",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "eng_civil",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "nat_cs",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "eng_mat",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "nat_cs",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "eng_nano",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "nat_cs",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "eng_aero",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "nat_cs",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "agr_main",
+      "weight": 0.0333,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "nat_cs",
+      "weight": 0.0333,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "agr_animal",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "nat_cs",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "soc_econ",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "nat_cs",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "soc_geo",
+      "weight": 0.0333,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "nat_cs",
+      "weight": 0.0333,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "hum_phil",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_phil",
+      "target": "nat_cs",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_complex",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "nat_cs",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_cs",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "nat_cs",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "nat_chem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_chem",
+      "target": "nat_phys",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "nat_earth",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_earth",
+      "target": "nat_phys",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "nat_bio",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "nat_phys",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "eng_nano",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "nat_phys",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "eng_soft",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "nat_phys",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "eng_aero",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "nat_phys",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "eng_robot",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "nat_phys",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_cogni",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "nat_phys",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_datasi",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "nat_phys",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_bioinf",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "nat_phys",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_hci",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "nat_phys",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_network",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "nat_phys",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_complex",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "nat_phys",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_decision",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "nat_phys",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_infosci",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "nat_phys",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_cyber",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "nat_phys",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_ai",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "nat_phys",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "nat_phys",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_fintech",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "nat_phys",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_logistics",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "nat_phys",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_phys",
+      "target": "cross_design",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "nat_phys",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_chem",
+      "target": "nat_earth",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_earth",
+      "target": "nat_chem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_chem",
+      "target": "nat_bio",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "nat_chem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_chem",
+      "target": "eng_chem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "nat_chem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_earth",
+      "target": "nat_bio",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "nat_earth",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_earth",
+      "target": "eng_env",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "nat_earth",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_earth",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "nat_earth",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_earth",
+      "target": "agr_animal",
+      "weight": 0.0625,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "nat_earth",
+      "weight": 0.0625,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_earth",
+      "target": "soc_geo",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "nat_earth",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_earth",
+      "target": "cross_sustain",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "nat_earth",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "nat_bio",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "nat_bio",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "nat_bio",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "agr_animal",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "nat_bio",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "nat_bio",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "agr_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_biotech",
+      "target": "nat_bio",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "cross_neuro",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "nat_bio",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "nat_bio",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "cross_sysbi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "nat_bio",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "nat_bio",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "nat_bio",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "eng_elec",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_elec",
+      "target": "eng_civil",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "eng_mech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mech",
+      "target": "eng_civil",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "eng_chem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "eng_civil",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "eng_mat",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "eng_civil",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "eng_civil",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "eng_env",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "eng_civil",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "eng_nano",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "eng_civil",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "eng_soft",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "eng_civil",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "eng_aero",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "eng_civil",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "eng_civil",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "soc_geo",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "eng_civil",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_civil",
+      "target": "cross_bioinf",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "eng_civil",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_elec",
+      "target": "eng_mech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mech",
+      "target": "eng_elec",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_elec",
+      "target": "eng_chem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "eng_elec",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_elec",
+      "target": "eng_mat",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "eng_elec",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_elec",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "eng_elec",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_elec",
+      "target": "eng_env",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "eng_elec",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_elec",
+      "target": "eng_nano",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "eng_elec",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_elec",
+      "target": "eng_soft",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "eng_elec",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_elec",
+      "target": "eng_aero",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "eng_elec",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_elec",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "eng_elec",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mech",
+      "target": "eng_chem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "eng_mech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mech",
+      "target": "eng_mat",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "eng_mech",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mech",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "eng_mech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mech",
+      "target": "eng_env",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "eng_mech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mech",
+      "target": "eng_nano",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "eng_mech",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mech",
+      "target": "eng_soft",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "eng_mech",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mech",
+      "target": "eng_aero",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "eng_mech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mech",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "eng_mech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "eng_mat",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "eng_chem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "eng_chem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "eng_env",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "eng_chem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "eng_nano",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "eng_chem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "eng_soft",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "eng_chem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "eng_aero",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "eng_chem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "eng_chem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "cross_hci",
+      "weight": 0.0667,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "eng_chem",
+      "weight": 0.0667,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "cross_infosci",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "eng_chem",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_chem",
+      "target": "cross_design",
+      "weight": 0.0333,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "eng_chem",
+      "weight": 0.0333,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "eng_med",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "eng_mat",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "eng_env",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "eng_mat",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "eng_nano",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "eng_mat",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "eng_soft",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "eng_mat",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "eng_aero",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "eng_mat",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "eng_robot",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "eng_mat",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "agr_main",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "eng_mat",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_mat",
+      "target": "soc_geo",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "eng_mat",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "eng_env",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "eng_nano",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "eng_med",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "eng_soft",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "eng_med",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "eng_aero",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "med_clinical",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_clinical",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "med_health",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_health",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "med_nursing",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_nursing",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_med",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "eng_med",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "eng_nano",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "eng_env",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "eng_soft",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "eng_env",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "eng_aero",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "eng_env",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "eng_env",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "eng_env",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_env",
+      "target": "cross_sustain",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "eng_env",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "eng_soft",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "eng_nano",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "eng_aero",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "eng_nano",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "eng_robot",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "eng_nano",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_cogni",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "eng_nano",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_datasi",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "eng_nano",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_bioinf",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "eng_nano",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_hci",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "eng_nano",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_network",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "eng_nano",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_complex",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "eng_nano",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_decision",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "eng_nano",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_infosci",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "eng_nano",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_cyber",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "eng_nano",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_ai",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "eng_nano",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "eng_nano",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_fintech",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "eng_nano",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_logistics",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "eng_nano",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_nano",
+      "target": "cross_design",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "eng_nano",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "eng_aero",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "eng_soft",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_complex",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "eng_soft",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_soft",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "eng_soft",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "eng_aero",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_cogni",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "eng_aero",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_datasi",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "eng_aero",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_bioinf",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "eng_aero",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_hci",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "eng_aero",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_network",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "eng_aero",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_complex",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "eng_aero",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_decision",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "eng_aero",
+      "weight": 0.18,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_infosci",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "eng_aero",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_cyber",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "eng_aero",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_ai",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "eng_aero",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "eng_aero",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_fintech",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "eng_aero",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_logistics",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "eng_aero",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_aero",
+      "target": "cross_design",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "eng_aero",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_complex",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "eng_robot",
+      "weight": 0.09,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "eng_robot",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "eng_robot",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "med_clinical",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_clinical",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "med_health",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_health",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "med_nursing",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_nursing",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "agr_animal",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "agr_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_biotech",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "cross_neuro",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "cross_sysbi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_basic",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "med_basic",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_clinical",
+      "target": "med_health",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_health",
+      "target": "med_clinical",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_clinical",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "med_clinical",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_clinical",
+      "target": "med_nursing",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_nursing",
+      "target": "med_clinical",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_clinical",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "med_clinical",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_clinical",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "med_clinical",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_health",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "med_health",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_health",
+      "target": "med_nursing",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_nursing",
+      "target": "med_health",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_health",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "med_health",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_health",
+      "target": "soc_poli",
+      "weight": 0.0556,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_poli",
+      "target": "med_health",
+      "weight": 0.0556,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_health",
+      "target": "cross_sts",
+      "weight": 0.0556,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "med_health",
+      "weight": 0.0556,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_health",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "med_health",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "med_nursing",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_nursing",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "agr_animal",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "agr_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_biotech",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "cross_neuro",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "cross_sysbi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_biotech",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "med_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_nursing",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "med_nursing",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "med_nursing",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "med_nursing",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "agr_animal",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "agr_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_biotech",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "soc_econ",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "agr_main",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "soc_geo",
+      "weight": 0.0333,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "agr_main",
+      "weight": 0.0333,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "hum_phil",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_phil",
+      "target": "agr_main",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "cross_neuro",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "cross_sysbi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "cross_sustain",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "cross_infosci",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "agr_main",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_main",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "agr_main",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "agr_animal",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "agr_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_biotech",
+      "target": "agr_animal",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "soc_geo",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "agr_animal",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "cross_neuro",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "agr_animal",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "agr_animal",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "cross_sysbi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "agr_animal",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_animal",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "agr_animal",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "agr_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_biotech",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "cross_neuro",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "cross_sysbi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_vet",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "agr_vet",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_biotech",
+      "target": "cross_neuro",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "agr_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_biotech",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "agr_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_biotech",
+      "target": "cross_sysbi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "agr_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "agr_biotech",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "agr_biotech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "soc_econ",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "soc_psych",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "soc_edu",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "soc_psych",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "soc_soc",
+      "weight": 0.3357,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_soc",
+      "target": "soc_psych",
+      "weight": 0.3357,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "soc_law",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "soc_psych",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "soc_poli",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_poli",
+      "target": "soc_psych",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "soc_geo",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "soc_psych",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "soc_media",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_media",
+      "target": "soc_psych",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "soc_anth",
+      "weight": 0.3385,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_anth",
+      "target": "soc_psych",
+      "weight": 0.3385,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "soc_psych",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "cross_beheco",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "soc_psych",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "cross_network",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "soc_psych",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "cross_orgbeh",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "soc_psych",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_psych",
+      "target": "cross_epidem",
+      "weight": 0.0333,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "soc_psych",
+      "weight": 0.0333,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "soc_edu",
+      "weight": 0.3263,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "soc_econ",
+      "weight": 0.3263,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "soc_soc",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_soc",
+      "target": "soc_econ",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "soc_law",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "soc_econ",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "soc_poli",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_poli",
+      "target": "soc_econ",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "soc_geo",
+      "weight": 0.3312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "soc_econ",
+      "weight": 0.3312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "soc_media",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_media",
+      "target": "soc_econ",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "soc_anth",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_anth",
+      "target": "soc_econ",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "cross_beheco",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "soc_econ",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "cross_orgbeh",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "soc_econ",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "cross_decision",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "soc_econ",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "soc_econ",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "soc_econ",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_econ",
+      "target": "cross_design",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "soc_econ",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "soc_soc",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_soc",
+      "target": "soc_edu",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "soc_law",
+      "weight": 0.3278,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "soc_edu",
+      "weight": 0.3278,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "soc_poli",
+      "weight": 0.325,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_poli",
+      "target": "soc_edu",
+      "weight": 0.325,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "soc_geo",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "soc_edu",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "soc_media",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_media",
+      "target": "soc_edu",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "soc_anth",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_anth",
+      "target": "soc_edu",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "soc_edu",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "cross_beheco",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "soc_edu",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "cross_urban",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "soc_edu",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "cross_orgbeh",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "soc_edu",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "cross_sts",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "soc_edu",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_edu",
+      "target": "cross_design",
+      "weight": 0.0588,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "soc_edu",
+      "weight": 0.0588,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_soc",
+      "target": "soc_law",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "soc_soc",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_soc",
+      "target": "soc_poli",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_poli",
+      "target": "soc_soc",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_soc",
+      "target": "soc_geo",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "soc_soc",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_soc",
+      "target": "soc_media",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_media",
+      "target": "soc_soc",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_soc",
+      "target": "soc_anth",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_anth",
+      "target": "soc_soc",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_soc",
+      "target": "cross_urban",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "soc_soc",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_soc",
+      "target": "cross_sts",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "soc_soc",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "soc_poli",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_poli",
+      "target": "soc_law",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "soc_geo",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "soc_law",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "soc_media",
+      "weight": 0.3294,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_media",
+      "target": "soc_law",
+      "weight": 0.3294,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "soc_anth",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_anth",
+      "target": "soc_law",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "hum_lang",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_lang",
+      "target": "soc_law",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "cross_sysbi",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "soc_law",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "cross_complex",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "soc_law",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_law",
+      "target": "cross_decision",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "soc_law",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_poli",
+      "target": "soc_geo",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "soc_poli",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_poli",
+      "target": "soc_media",
+      "weight": 0.3556,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_media",
+      "target": "soc_poli",
+      "weight": 0.3556,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_poli",
+      "target": "soc_anth",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_anth",
+      "target": "soc_poli",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_poli",
+      "target": "hum_lang",
+      "weight": 0.0588,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_lang",
+      "target": "soc_poli",
+      "weight": 0.0588,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "soc_media",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_media",
+      "target": "soc_geo",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "soc_anth",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_anth",
+      "target": "soc_geo",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "hum_phil",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_phil",
+      "target": "soc_geo",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "cross_datasi",
+      "weight": 0.03,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "soc_geo",
+      "weight": 0.03,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "cross_urban",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "soc_geo",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "cross_hci",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "soc_geo",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "cross_network",
+      "weight": 0.03,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "soc_geo",
+      "weight": 0.03,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "cross_complex",
+      "weight": 0.03,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "soc_geo",
+      "weight": 0.03,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "cross_decision",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "soc_geo",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_geo",
+      "target": "cross_infosci",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "soc_geo",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_media",
+      "target": "soc_anth",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_anth",
+      "target": "soc_media",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_media",
+      "target": "hum_lang",
+      "weight": 0.0588,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_lang",
+      "target": "soc_media",
+      "weight": 0.0588,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_media",
+      "target": "cross_urban",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "soc_media",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_media",
+      "target": "cross_sts",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "soc_media",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_anth",
+      "target": "hum_hist",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_hist",
+      "target": "soc_anth",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_anth",
+      "target": "cross_urban",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "soc_anth",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_anth",
+      "target": "cross_network",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "soc_anth",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "soc_anth",
+      "target": "cross_sts",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "soc_anth",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_hist",
+      "target": "hum_lang",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_lang",
+      "target": "hum_hist",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_hist",
+      "target": "hum_phil",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_phil",
+      "target": "hum_hist",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_hist",
+      "target": "hum_arts",
+      "weight": 0.3263,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_arts",
+      "target": "hum_hist",
+      "weight": 0.3263,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_hist",
+      "target": "cross_bioinf",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "hum_hist",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_hist",
+      "target": "cross_decision",
+      "weight": 0.0625,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "hum_hist",
+      "weight": 0.0625,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_hist",
+      "target": "cross_design",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "hum_hist",
+      "weight": 0.0312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_lang",
+      "target": "hum_phil",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_phil",
+      "target": "hum_lang",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_lang",
+      "target": "hum_arts",
+      "weight": 0.3263,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_arts",
+      "target": "hum_lang",
+      "weight": 0.3263,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_phil",
+      "target": "hum_arts",
+      "weight": 0.3263,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_arts",
+      "target": "hum_phil",
+      "weight": 0.3263,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_phil",
+      "target": "cross_sts",
+      "weight": 0.0588,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "hum_phil",
+      "weight": 0.0588,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "hum_arts",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "hum_arts",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_cogni",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_beheco",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_cogni",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_cogni",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_cogni",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_cogni",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_orgbeh",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_decision",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_cogni",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_cogni",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_cogni",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cogni",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_cogni",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_datasi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_neuro",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_sysbi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_neuro",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_hci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_network",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_decision",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_infosci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_cyber",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_ai",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_quantum",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_neuro",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_fintech",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_logistics",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_neuro",
+      "target": "cross_design",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_neuro",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_datasi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_datasi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_datasi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_datasi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_complex",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_datasi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_decision",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_datasi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_datasi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_datasi",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_datasi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_bioinf",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_sysbi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_bioinf",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_bioinf",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_bioinf",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_bioinf",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_decision",
+      "weight": 0.3312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_bioinf",
+      "weight": 0.3312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_bioinf",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_bioinf",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_bioinf",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_hci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_network",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_complex",
+      "weight": 0.3278,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_beheco",
+      "weight": 0.3278,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_orgbeh",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_beheco",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_decision",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_beheco",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_infosci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_cyber",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_ai",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_quantum",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_beheco",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_logistics",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_beheco",
+      "target": "cross_design",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_beheco",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_hci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_network",
+      "weight": 0.3278,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_sysbi",
+      "weight": 0.3278,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_decision",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_infosci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_cyber",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_ai",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_quantum",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_epidem",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_sysbi",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_fintech",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_logistics",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sysbi",
+      "target": "cross_design",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_sysbi",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_hci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_network",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_decision",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_infosci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_cyber",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_ai",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_quantum",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_fintech",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_logistics",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sustain",
+      "target": "cross_design",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_sustain",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_hci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_network",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_orgbeh",
+      "weight": 0.325,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_urban",
+      "weight": 0.325,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_decision",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_infosci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_cyber",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_ai",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_quantum",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_sts",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_urban",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_fintech",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_logistics",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_urban",
+      "target": "cross_design",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_urban",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_hci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_hci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_decision",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_hci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_hci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_hci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_hci",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_hci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_complex",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_network",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_decision",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_network",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_network",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_network",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_network",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_orgbeh",
+      "weight": 0.3263,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_complex",
+      "weight": 0.3263,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_decision",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_complex",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_infosci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_cyber",
+      "weight": 0.3278,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_complex",
+      "weight": 0.3278,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_ai",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_complex",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_fintech",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_logistics",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_complex",
+      "target": "cross_design",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_complex",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_decision",
+      "weight": 0.3263,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_orgbeh",
+      "weight": 0.3263,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_infosci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_cyber",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_ai",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_quantum",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_fintech",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_orgbeh",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_orgbeh",
+      "target": "cross_design",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_orgbeh",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_infosci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_decision",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_cyber",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_decision",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_ai",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_decision",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_quantum",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_decision",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_decision",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_decision",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_decision",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_logistics",
+      "weight": 0.3312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_decision",
+      "weight": 0.3312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_decision",
+      "target": "cross_design",
+      "weight": 0.3312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_decision",
+      "weight": 0.3312,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_sts",
+      "weight": 0.3278,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_infosci",
+      "weight": 0.3278,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_infosci",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_infosci",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_infosci",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_cyber",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_cyber",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_cyber",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_cyber",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_ai",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_ai",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_ai",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_ai",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_quantum",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_quantum",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_quantum",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_quantum",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_fintech",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_logistics",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_sts",
+      "target": "cross_design",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_sts",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_fintech",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_logistics",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_epidem",
+      "target": "cross_design",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_epidem",
+      "weight": 0.3,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_fintech",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_fintech",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_logistics",
+      "target": "cross_design",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    },
+    {
+      "source": "cross_design",
+      "target": "cross_logistics",
+      "weight": 0.9,
+      "relationship": "co-occurrence"
+    }
+  ]
+}

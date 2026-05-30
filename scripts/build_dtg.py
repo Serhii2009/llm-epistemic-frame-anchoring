@@ -98,23 +98,51 @@ def build_s2_matrix(existing: dict[str, float]) -> dict[str, float]:
     return existing
 
 
+def description_overlap(node_a: dict, node_b: dict) -> float:
+    """Word-overlap similarity between domain descriptions (no embedding required)."""
+    stop = {"and", "or", "of", "in", "the", "a", "an", "for", "to", "with",
+            "by", "from", "at", "on", "as", "is", "are", "be", "been"}
+    words_a = {w.lower() for w in node_a["description"].split() if w.lower() not in stop and len(w) > 3}
+    words_b = {w.lower() for w in node_b["description"].split() if w.lower() not in stop and len(w) > 3}
+    if not words_a or not words_b:
+        return 0.0
+    intersection = words_a & words_b
+    union = words_a | words_b
+    return len(intersection) / len(union)  # Jaccard similarity
+
+
+def same_division(node_a: dict, node_b: dict) -> float:
+    """Return 0.3 if nodes share a division (intra-division structural connection)."""
+    return 0.3 if node_a["division"] == node_b["division"] else 0.0
+
+
 def node_pair_weight(node_a: dict, node_b: dict, s2_matrix: dict[str, float]) -> float:
-    """Compute DTG edge weight between two FORD nodes via their S2 field mappings."""
+    """
+    Compute DTG edge weight combining:
+    1. Semantic Scholar co-occurrence (primary signal, often sparse)
+    2. Description word-overlap Jaccard (fallback structural signal)
+    3. Same-division bonus (intra-division connections)
+    """
     fields_a = S2_FIELD_MAP.get(node_a["id"], [])
     fields_b = S2_FIELD_MAP.get(node_b["id"], [])
-    if not fields_a or not fields_b:
-        return 0.0
 
-    best = 0.0
-    for fa in fields_a:
-        for fb in fields_b:
-            if fa == fb:
-                # Same S2 field → strong intra-domain connection
-                best = max(best, 0.9)
-                continue
-            key = "||".join(sorted([fa, fb]))
-            best = max(best, s2_matrix.get(key, 0.0))
-    return best
+    s2_weight = 0.0
+    if fields_a and fields_b:
+        for fa in fields_a:
+            for fb in fields_b:
+                if fa == fb:
+                    s2_weight = max(s2_weight, 0.9)
+                    continue
+                key = "||".join(sorted([fa, fb]))
+                s2_weight = max(s2_weight, s2_matrix.get(key, 0.0))
+
+    # Supplement sparse S2 weights with description overlap
+    overlap = description_overlap(node_a, node_b)
+    division_bonus = same_division(node_a, node_b)
+
+    # Combined: S2 weight takes priority; overlap fills in where S2 is 0
+    combined = max(s2_weight, overlap * 0.5 + division_bonus)
+    return round(min(combined, 1.0), 4)
 
 
 def build_graph(s2_matrix: dict[str, float]) -> tuple[list[dict], list[dict]]:
