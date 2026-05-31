@@ -57,7 +57,7 @@ class ConceptDeltaExtractor:
         text = re.sub(r"^[-*•]\s+", "", text, flags=re.MULTILINE)   # bullets
         text = re.sub(r"^\d+\.\s+", "", text, flags=re.MULTILINE)   # numbered lists
         text = re.sub(r"^>+\s*", "", text, flags=re.MULTILINE)      # blockquotes
-        text = re.sub(r"\n{3,}", "\n\n", text)                 # collapse extra blank lines
+        text = re.sub(r"\n+", " ", text)                       # collapse all remaining newlines to space
         return text.strip()
 
     def _extract_noun_phrases(self, text: str) -> list[str]:

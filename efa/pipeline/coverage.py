@@ -50,6 +50,7 @@ class CoverageEstimator:
             footprint,
             mea_result.skeleton_text,
             top_k=k_gaps,
+            frame_summary_text=mea_result.frame_summary,
         )
 
         return activated, gaps, footprint
