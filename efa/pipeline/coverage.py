@@ -34,6 +34,16 @@ class CoverageEstimator:
             top_k=FRAME_MAP_TOP_K,
         )
 
+        # Guarantee the primary domain node is in the activation set.
+        # The LLM-identified primary_domain_id is more reliable than embedding
+        # similarity for domain disambiguation (e.g., "educational sciences" vs
+        # any node whose description happens to embed close to the frame summary).
+        if mea_result.primary_domain_id:
+            seed = self._dtg.node(mea_result.primary_domain_id)
+            if seed is not None and seed not in activated:
+                # Replace the lowest-ranked activated node with the explicit seed
+                activated = [seed] + activated[:FRAME_MAP_TOP_K - 1]
+
         footprint = self._dtg.get_activation_footprint(activated, k_hops=DTG_K_HOPS)
 
         gaps = self._dtg.rank_gaps(

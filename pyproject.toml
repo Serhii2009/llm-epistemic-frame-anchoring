@@ -22,6 +22,7 @@ dependencies = [
 [project.scripts]
 build-dtg = "scripts.build_dtg:main"
 run-eca = "scripts.run_eca:main"
+calibrate-dtg = "scripts.calibrate_dtg:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

@@ -10,10 +10,16 @@ import json
 from dataclasses import dataclass, field
 
 from efa.config import CONTAMINATION_THRESHOLD_SP
+from efa.dtg.nodes import FORD_NODES
 from efa.embeddings import embed
 from efa.llm import LLMClient
 
-_SYSTEM = """\
+# All valid DTG node IDs — injected into the prompt at runtime so the LLM
+# can pick one exactly rather than free-form text that may not map to a node.
+_ALL_NODE_IDS = [n["id"] for n in FORD_NODES]
+_NODE_ID_LIST = ", ".join(f'"{nid}"' for nid in _ALL_NODE_IDS)
+
+_SYSTEM_TEMPLATE = """\
 You are an analytical assistant. Your task is to separate a problem statement into two components:
 
 1. FRAME: the DISCIPLINE being applied to analyze or solve the problem — the conceptual lens, methodology, or professional field from which the problem is being approached. This is NOT the subject matter; it is the analytic tradition.
@@ -23,16 +29,28 @@ You are an analytical assistant. Your task is to separate a problem statement in
 2. SKELETON: a frame-independent structural description of the actual problem — stated in neutral terms without the original domain vocabulary.
 
 Return ONLY valid JSON in this exact schema:
-{
+{{
   "frame_summary": "one-sentence description of the discipline/field being applied (e.g., 'software engineering practices', 'HR management')",
   "frame_concepts": ["key concept 1", "key concept 2"],
-  "skeleton": {
+  "primary_domain_id": "the single most specific node ID from the list below that describes the applied discipline. Must be EXACTLY one of the listed IDs.",
+  "skeleton": {{
     "goals": ["what outcome needs to be achieved, in neutral language"],
     "constraints": ["what cannot be violated or changed"],
     "entities": ["the core agents, systems, or resources involved — described functionally, not by domain label"],
     "success_criteria": ["how you would know the problem is solved"]
-  }
-}
+  }}
+}}
+
+Valid primary_domain_id values (pick the closest match):
+{node_id_list}
+
+Examples for primary_domain_id:
+  "Why do school reform initiatives fail?" → "soc_edu"
+  "My ML model overfits" → "cross_ai"
+  "How do I speed up my Postgres queries?" → "nat_cs"
+  "How do I reduce employee turnover?" → "cross_orgbeh"
+  "How do I price my SaaS product?" → "soc_econ"
+  "Why does my city have traffic jams?" → "cross_urban"
 
 Rules for the skeleton:
 - Do NOT use the discipline-specific vocabulary from the frame
@@ -40,6 +58,8 @@ Rules for the skeleton:
 - "engineering team" → "skilled technical contributors"; "API" → "interface"; "database" → "persistent data store"
 - The skeleton should read as a problem description a generalist could understand
 """
+
+_SYSTEM = _SYSTEM_TEMPLATE.format(node_id_list=_NODE_ID_LIST)
 
 
 @dataclass
@@ -49,6 +69,7 @@ class MEAResult:
     skeleton: dict
     skeleton_text: str
     frame_text: str
+    primary_domain_id: str = ""          # DTG node ID of the primary domain
     contamination_warning: bool = False
     contamination_sim: float = 0.0
 
@@ -85,12 +106,17 @@ class MetaEpistemicAnalyzer:
             skeleton_vec = embed.encode(skeleton_text)
             sim = embed.cosine_sim(frame_vec, skeleton_vec)
 
+            # Validate primary_domain_id — must be one of the known node IDs
+            raw_pid = parsed.get("primary_domain_id", "")
+            primary_domain_id = raw_pid if raw_pid in _ALL_NODE_IDS else ""
+
             result = MEAResult(
                 frame_summary=parsed.get("frame_summary", ""),
                 frame_concepts=parsed.get("frame_concepts", []),
                 skeleton=skeleton,
                 skeleton_text=skeleton_text,
                 frame_text=frame_text,
+                primary_domain_id=primary_domain_id,
                 contamination_warning=sim >= CONTAMINATION_THRESHOLD_SP,
                 contamination_sim=sim,
             )
@@ -110,6 +136,7 @@ class MetaEpistemicAnalyzer:
                 skeleton={},
                 skeleton_text=prompt[:500],
                 frame_text=frame_text,
+                primary_domain_id="",
                 contamination_warning=True,
                 contamination_sim=1.0,
             )

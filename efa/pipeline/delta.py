@@ -5,6 +5,7 @@ vanilla in-frame response (C₀). Uses spaCy NP chunking + cosine filtering.
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 
 import numpy as np
@@ -42,9 +43,26 @@ class ConceptDeltaExtractor:
                     "spaCy model not found. Run: python -m spacy download en_core_web_sm"
                 )
 
+    @staticmethod
+    def _strip_markdown(text: str) -> str:
+        """Remove markdown formatting so spaCy sees clean prose, not syntax tokens."""
+        text = re.sub(r"```[\s\S]*?```", " ", text)            # fenced code blocks
+        text = re.sub(r"`[^`]+`", " ", text)                   # inline code
+        text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)          # bold
+        text = re.sub(r"\*(.+?)\*", r"\1", text)               # italic
+        text = re.sub(r"__(.+?)__", r"\1", text)               # bold alt
+        text = re.sub(r"_(.+?)_", r"\1", text)                 # italic alt
+        text = re.sub(r"#+\s*", "", text)                      # headings
+        text = re.sub(r"\[([^\]]+)\]\([^\)]+\)", r"\1", text)  # [link](url) → text
+        text = re.sub(r"^[-*•]\s+", "", text, flags=re.MULTILINE)   # bullets
+        text = re.sub(r"^\d+\.\s+", "", text, flags=re.MULTILINE)   # numbered lists
+        text = re.sub(r"^>+\s*", "", text, flags=re.MULTILINE)      # blockquotes
+        text = re.sub(r"\n{3,}", "\n\n", text)                 # collapse extra blank lines
+        return text.strip()
+
     def _extract_noun_phrases(self, text: str) -> list[str]:
         self._load_nlp()
-        doc = self._nlp(text[:5000])  # clip for performance
+        doc = self._nlp(self._strip_markdown(text)[:5000])
         phrases = []
         for chunk in doc.noun_chunks:
             cleaned = chunk.text.strip().lower()
@@ -72,8 +90,8 @@ class ConceptDeltaExtractor:
         C₀: greedy vanilla LLM response to original prompt.
         DELTA = concepts in gap responses NOT in C₀.
         """
-        # Get C₀ (greedy, T=0)
-        c0_text = self._llm.complete(original_prompt, temperature=0.0)
+        # Get C₀ (greedy, T=0) — strip markdown before phrase extraction
+        c0_text = self._strip_markdown(self._llm.complete(original_prompt, temperature=0.0))
         c0_phrases = self._extract_noun_phrases(c0_text)
         c0_vecs = [embed.encode(p) for p in c0_phrases] if c0_phrases else []
 

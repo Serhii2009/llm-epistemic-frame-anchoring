@@ -123,18 +123,37 @@ class DTG:
         top_k: int = 3,
     ) -> list[Node]:
         """
-        Score unactivated nodes by: edge_weight_to_footprint × S(P) alignment.
-        Returns top_k coverage gap nodes.
+        Score unactivated nodes by structural proximity × S(P) alignment × cross-division bonus.
+
+        Scoring formula:
+          effective_edge = max(dtg_edge_weight, 0.02)   # small base, not 0.1 floor
+          cross_div_bonus = 1.3 if node.division not in activated divisions else 1.0
+          score = effective_edge × sp_alignment × cross_div_bonus
+
+        The 0.02 base (down from 0.1) preserves structural signal: a well-connected
+        gap node (edge_weight=0.3) still outscores an isolated one (0.02) by 15×.
+
+        The cross_div_bonus rewards genuinely cross-domain gaps. This prevents
+        domains with incidental vocabulary overlap (e.g. Medical Biotechnology shares
+        "outcomes/intervention/population" with educational skeletons) from winning
+        over structurally distant but thematically novel divisions.
         """
         self._ensure_embeddings()
         sp_vec = embed.encode(problem_skeleton_text)
         unactivated = [nid for nid in self._node_ids if nid not in footprint]
 
+        # Divisions already represented in the active frame footprint
+        activated_divisions = {
+            self._nodes[nid].division
+            for nid in footprint
+            if nid in self._nodes
+        }
+
         scored: list[tuple[float, Node]] = []
         for nid in unactivated:
             node = self._nodes[nid]
 
-            # Max edge weight from any footprint node to this node
+            # Structural signal: max edge weight from any footprint node to this node
             edge_weight = 0.0
             for fp_nid in footprint:
                 w = self._graph.get_edge_data(fp_nid, nid, {}).get("weight", 0.0)
@@ -143,11 +162,11 @@ class DTG:
             # Semantic alignment with problem skeleton
             sp_alignment = max(0.0, float(sp_vec @ node.embedding))
 
-            # Score: edge_weight × sp_alignment, with a floor of 0.1 on edge_weight
-            # so that all nodes with sp_alignment > 0 are ranked even when the DTG
-            # has sparse edges (common for v1 with S2 co-occurrence filtering).
-            effective_edge = max(edge_weight, 0.1)
-            score = effective_edge * sp_alignment
+            # Cross-division novelty bonus: prefer gaps from divisions not in the frame
+            cross_div_bonus = 1.3 if node.division not in activated_divisions else 1.0
+
+            effective_edge = max(edge_weight, 0.02)
+            score = effective_edge * sp_alignment * cross_div_bonus
             if score > 0:
                 scored.append((score, node))
 
