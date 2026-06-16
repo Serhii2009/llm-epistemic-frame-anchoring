@@ -1,0 +1,150 @@
+{
+  "models": [
+    "anthropic/claude-sonnet-4-5",
+    "openai/gpt-4o"
+  ],
+  "conditions": [
+    "A",
+    "B"
+  ],
+  "strata": {
+    "near": "<0.3",
+    "medium": "0.3-0.5",
+    "far": ">0.5"
+  },
+  "n_concepts": 67,
+  "per_condition": {
+    "anthropic/claude-sonnet-4-5|A": {
+      "n_concepts": 67,
+      "recall_at_N": 0.7761,
+      "by_stratum": {
+        "medium": 0.6429,
+        "near": 1.0
+      },
+      "by_stratum_n": {
+        "medium": 42,
+        "near": 25
+      }
+    },
+    "anthropic/claude-sonnet-4-5|B": {
+      "n_concepts": 37,
+      "recall_at_N": 0.9189,
+      "by_stratum": {
+        "medium": 0.875,
+        "near": 1.0
+      },
+      "by_stratum_n": {
+        "medium": 24,
+        "near": 13
+      }
+    },
+    "openai/gpt-4o|A": {
+      "n_concepts": 19,
+      "recall_at_N": 0.6316,
+      "by_stratum": {
+        "medium": 0.3,
+        "near": 1.0
+      },
+      "by_stratum_n": {
+        "medium": 10,
+        "near": 9
+      }
+    }
+  },
+  "suppression": {
+    "anthropic/claude-sonnet-4-5|A": {
+      "spearman_rho": -0.6336,
+      "p_value": 0.0,
+      "n": 67
+    },
+    "anthropic/claude-sonnet-4-5|B": {
+      "spearman_rho": -0.5908,
+      "p_value": 0.000118,
+      "n": 37
+    },
+    "openai/gpt-4o|A": {
+      "spearman_rho": -0.6697,
+      "p_value": 0.001709,
+      "n": 19
+    }
+  },
+  "ab_closure": {
+    "anthropic/claude-sonnet-4-5": {
+      "n_pairs": 37,
+      "recall_A": 0.7838,
+      "recall_B": 0.9189,
+      "delta_B_minus_A": 0.1351,
+      "wilcoxon_p": 0.025347
+    },
+    "openai/gpt-4o": {
+      "n_pairs": 0,
+      "recall_A": null,
+      "recall_B": null,
+      "delta_B_minus_A": null,
+      "wilcoxon_p": null
+    }
+  },
+  "residual_absence": {
+    "anthropic/claude-sonnet-4-5": {
+      "count": 3,
+      "by_stratum": {
+        "near": 0,
+        "medium": 3,
+        "far": 0
+      },
+      "items": [
+        {
+          "problem_id": "building_energy",
+          "concept": "Principal-agent / split incentives",
+          "distance": 0.3864,
+          "stratum": "medium"
+        },
+        {
+          "problem_id": "crop_yield",
+          "concept": "Diminishing marginal returns to inputs",
+          "distance": 0.3752,
+          "stratum": "medium"
+        },
+        {
+          "problem_id": "employee_turnover",
+          "concept": "Efficiency wages",
+          "distance": 0.3714,
+          "stratum": "medium"
+        }
+      ]
+    },
+    "openai/gpt-4o": {
+      "count": 0,
+      "by_stratum": {
+        "near": 0,
+        "medium": 0,
+        "far": 0
+      },
+      "items": []
+    }
+  },
+  "judge_embedding_agreement": {
+    "0.5": {
+      "agreement": 0.7001,
+      "judge_present_rate": 0.6675,
+      "embed_present_rate": 0.9674
+    },
+    "0.6": {
+      "agreement": 1.0,
+      "judge_present_rate": 0.6675,
+      "embed_present_rate": 0.6675
+    },
+    "0.7": {
+      "agreement": 0.5578,
+      "judge_present_rate": 0.6675,
+      "embed_present_rate": 0.2254
+    }
+  },
+  "eca": {},
+  "decision_rule_phase1": {
+    "models_with_neg_suppression_under_B": [
+      "anthropic/claude-sonnet-4-5"
+    ],
+    "models_with_far_residual_B": []
+  }
+}

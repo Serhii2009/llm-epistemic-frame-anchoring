@@ -1,0 +1,281 @@
+{
+  "_meta": {
+    "name": "EFA-Bench v1",
+    "purpose": "Falsification benchmark for Epistemic Frame Anchoring. Each problem embeds a clear disciplinary FRAME. Each ground-truth concept is genuinely relevant but native to a DIFFERENT discipline, and is backed by a specific human-authored source linking concept->problem-type. Distances to frame are computed at analysis time with BGE-M3, not assigned here.",
+    "schema": {
+      "id": "string",
+      "frame_domain": "the discipline the problem is framed in",
+      "domain_pair": "frame -> outside-frame source domain(s)",
+      "problem_statement": "3-5 sentences embedding the frame",
+      "frame_concepts": "terms a practitioner of frame_domain would use; centroid for distance",
+      "ground_truth": "[{concept, from_domain, source, relevance}]"
+    }
+  },
+  "problems": [
+    {
+      "id": "ml_overfit",
+      "frame_domain": "machine learning engineering",
+      "domain_pair": "machine learning -> information theory / philosophy of science / statistical physics",
+      "problem_statement": "My deep neural network reaches 98% accuracy on the training set but only 62% on held-out test data. I have already tried collecting more labeled examples and it barely helps. As an ML engineer I want a principled way to decide how complex my model should be and why a simpler model can generalize better. What underlying principles govern this?",
+      "frame_concepts": ["overfitting", "regularization", "training and test accuracy", "model capacity", "neural network hyperparameters", "validation set"],
+      "ground_truth": [
+        {"concept": "Minimum Description Length principle", "from_domain": "information theory", "source": "Grünwald, P. (2007). The Minimum Description Length Principle. MIT Press.", "relevance": "Frames model selection as data compression: the best model minimizes the combined description length of model + data, a non-statistical justification for preferring simpler models."},
+        {"concept": "Occam's razor / parsimony as an epistemic principle", "from_domain": "philosophy of science", "source": "Sober, E. (2015). Ockham's Razors: A User's Manual. Cambridge University Press.", "relevance": "Provides the epistemological grounding for why simpler hypotheses are preferred, independent of the statistical machinery of ML."},
+        {"concept": "No Free Lunch theorem", "from_domain": "mathematical optimization", "source": "Wolpert, D. & Macready, W. (1997). No Free Lunch Theorems for Optimization. IEEE Transactions on Evolutionary Computation 1(1).", "relevance": "Shows no learner is best across all possible problems, so generalization depends on assumptions matching the data-generating process."},
+        {"concept": "Statistical mechanics of generalization (phase transitions in learning)", "from_domain": "statistical physics", "source": "Engel, A. & Van den Broeck, C. (2001). Statistical Mechanics of Learning. Cambridge University Press.", "relevance": "Treats generalization error as a function of the load parameter and predicts abrupt learning transitions, a physics view absent from standard ML practice."}
+      ]
+    },
+    {
+      "id": "traffic_congestion",
+      "frame_domain": "traffic and transportation engineering",
+      "domain_pair": "traffic engineering -> economics / network game theory",
+      "problem_statement": "Our city has chronic peak-hour congestion on its main arterials. As a transportation engineer I have widened roads and re-timed signals, but congestion returns within a year. I want to understand the deeper forces that keep these corridors saturated despite added capacity. What am I missing?",
+      "frame_concepts": ["traffic flow", "road capacity", "signal timing", "level of service", "lane widening", "intersection throughput"],
+      "ground_truth": [
+        {"concept": "Induced demand (fundamental law of road congestion)", "from_domain": "economics", "source": "Duranton, G. & Turner, M. (2011). The Fundamental Law of Road Congestion: Evidence from US Cities. American Economic Review 101(6).", "relevance": "Empirically, vehicle-kilometres travelled rises proportionally with lane-kilometres, so added capacity is consumed by new trips rather than relieving congestion."},
+        {"concept": "Braess's paradox", "from_domain": "network game theory", "source": "Braess, D., Nagurney, A. & Wakolbinger, T. (2005). On a Paradox of Traffic Planning (translation of Braess 1968). Transportation Science 39(4).", "relevance": "Adding a road to a network can increase total travel time at user equilibrium, a counterintuitive result from selfish routing."},
+        {"concept": "Congestion pricing / negative externalities", "from_domain": "welfare economics", "source": "Vickrey, W. (1963). Pricing in Urban and Suburban Transport. American Economic Review 53(2).", "relevance": "Each driver imposes an uncompensated delay cost on others; pricing the externality, not adding capacity, restores efficient flow."}
+      ]
+    },
+    {
+      "id": "hospital_readmission",
+      "frame_domain": "clinical medicine",
+      "domain_pair": "clinical medicine -> sociology / operations research",
+      "problem_statement": "Patients discharged after heart failure keep returning to my hospital within 30 days. Clinically I optimize medication regimens and discharge instructions, yet readmission rates stay high. As a physician I want to understand the non-clinical drivers I cannot see from the bedside. What explains this pattern?",
+      "frame_concepts": ["heart failure", "discharge", "medication adherence", "clinical follow-up", "comorbidity", "readmission rate"],
+      "ground_truth": [
+        {"concept": "Social determinants of health", "from_domain": "social epidemiology", "source": "Marmot, M. (2005). Social Determinants of Health Inequalities. The Lancet 365(9464).", "relevance": "Housing, income, transport and social support drive health outcomes more than clinical care and predict readmission independent of medical management."},
+        {"concept": "Transitional care model", "from_domain": "nursing science", "source": "Naylor, M. et al. (2011). The Importance of Transitional Care in Achieving Health Reform. Health Affairs 30(4).", "relevance": "Structured nurse-led handoff across the care boundary reduces readmissions; the failure is in the system transition, not the prescription."},
+        {"concept": "Patient flow / queueing analysis", "from_domain": "operations research", "source": "Green, L. (2006). Queueing Analysis in Healthcare. In Patient Flow: Reducing Delay in Healthcare Delivery, Springer.", "relevance": "Capacity and variability in beds and follow-up appointments create bottlenecks that produce premature discharge and bounce-backs."}
+      ]
+    },
+    {
+      "id": "employee_turnover",
+      "frame_domain": "human resources management",
+      "domain_pair": "HR management -> labor economics / sociology",
+      "problem_statement": "My company loses skilled staff faster than competitors. As an HR manager I have raised salaries and improved benefits, but attrition stays high. I want to understand what really binds people to or pushes them from an organization beyond compensation. What forces am I overlooking?",
+      "frame_concepts": ["employee retention", "compensation and benefits", "attrition rate", "engagement survey", "performance review", "onboarding"],
+      "ground_truth": [
+        {"concept": "Job embeddedness", "from_domain": "organizational behavior", "source": "Mitchell, T., Holtom, B., Lee, T., Sablynski, C. & Erez, M. (2001). Why People Stay: Using Job Embeddedness to Predict Voluntary Turnover. Academy of Management Journal 44(6).", "relevance": "Off-the-job links, fit and sacrifice (community, family) predict staying better than satisfaction or pay."},
+        {"concept": "Efficiency wages", "from_domain": "labor economics", "source": "Akerlof, G. & Yellen, J. (1986). Efficiency Wage Models of the Labor Market. Cambridge University Press.", "relevance": "Wages above market clearing alter effort and quit behavior through fairness and turnover-cost mechanisms beyond simple level effects."},
+        {"concept": "Strength of weak ties", "from_domain": "sociology", "source": "Granovetter, M. (1973). The Strength of Weak Ties. American Journal of Sociology 78(6).", "relevance": "External weak-tie networks deliver job information that drives voluntary mobility regardless of internal HR policy."}
+      ]
+    },
+    {
+      "id": "antibiotic_resistance",
+      "frame_domain": "clinical infection control",
+      "domain_pair": "clinical medicine -> evolutionary biology / game theory",
+      "problem_statement": "Resistant bacterial infections keep rising on my hospital ward despite strict hygiene and broad-spectrum antibiotics. As an infection-control clinician I want to understand why aggressive treatment seems to make the long-run problem worse. What principles govern this?",
+      "frame_concepts": ["antibiotic", "infection control", "hand hygiene", "broad-spectrum treatment", "bacterial culture", "resistance rate"],
+      "ground_truth": [
+        {"concept": "Selection pressure and fitness landscapes", "from_domain": "evolutionary biology", "source": "zur Wiesch, P.A. et al. (2011). Population Biological Principles of Drug-Resistance Evolution in Infectious Diseases. The Lancet Infectious Diseases 11(3).", "relevance": "Antibiotic exposure selects pre-existing resistant variants; dosing and duration shape the evolutionary trajectory of the population."},
+        {"concept": "Tragedy of the commons", "from_domain": "game theory / ecology", "source": "Hardin, G. (1968). The Tragedy of the Commons. Science 162(3859).", "relevance": "Antibiotic effectiveness is a shared exhaustible resource; individually rational prescribing depletes it collectively."},
+        {"concept": "Horizontal gene transfer", "from_domain": "microbial ecology", "source": "Ochman, H., Lawrence, J. & Groisman, E. (2000). Lateral Gene Transfer and the Nature of Bacterial Innovation. Nature 405.", "relevance": "Resistance spreads between species via plasmids, so resistance is an ecosystem property, not a per-pathogen trait."}
+      ]
+    },
+    {
+      "id": "software_outages",
+      "frame_domain": "software engineering / site reliability",
+      "domain_pair": "software engineering -> organizational sociology / safety science",
+      "problem_statement": "Our distributed service suffers recurring cascading outages. As an SRE I add retries, redundancy, and monitoring, yet new failure modes keep emerging at the seams between healthy components. I want to understand why adding safeguards sometimes creates new failures. What theory explains this?",
+      "frame_concepts": ["distributed system", "redundancy", "monitoring and alerting", "failover", "retries", "uptime SLA"],
+      "ground_truth": [
+        {"concept": "Normal accidents (tight coupling and interactive complexity)", "from_domain": "organizational sociology", "source": "Perrow, C. (1984). Normal Accidents: Living with High-Risk Technologies. Basic Books.", "relevance": "In tightly coupled, interactively complex systems, accidents are inevitable and added components can introduce new hidden interactions."},
+        {"concept": "High Reliability Organizations / mindful operation", "from_domain": "organization science", "source": "Weick, K. & Sutcliffe, K. (2001). Managing the Unexpected: Assuring High Performance in an Age of Complexity. Jossey-Bass.", "relevance": "Reliability is a property of human organizational practices (preoccupation with failure, deference to expertise), not just technical redundancy."},
+        {"concept": "Safety-II / resilience engineering", "from_domain": "safety science", "source": "Hollnagel, E. (2014). Safety-I and Safety-II: The Past and Future of Safety Management. Ashgate.", "relevance": "Reliability comes from the system's capacity to adapt to surprise, not only from eliminating the ways things go wrong."}
+      ]
+    },
+    {
+      "id": "crop_yield",
+      "frame_domain": "agronomy",
+      "domain_pair": "agronomy -> microbial ecology / economics",
+      "problem_statement": "Yields on my farm have declined over several seasons despite the same fertilizer and irrigation regime. As an agronomist I have optimized NPK ratios and watering schedules, but the soil seems less productive each year. What deeper processes might be at work?",
+      "frame_concepts": ["crop yield", "fertilizer NPK", "irrigation", "soil nutrients", "planting density", "pesticide application"],
+      "ground_truth": [
+        {"concept": "Soil microbiome and mycorrhizal symbiosis", "from_domain": "microbial ecology", "source": "van der Heijden, M., Bardgett, R. & van Straalen, N. (2008). The Unseen Majority: Soil Microbes as Drivers of Plant Diversity and Productivity. Ecology Letters 11(3).", "relevance": "Mycorrhizal fungi and microbial communities govern nutrient uptake; chemical regimes that ignore them degrade the biological basis of fertility."},
+        {"concept": "Soil organic carbon depletion / soil food web", "from_domain": "soil ecology", "source": "Lal, R. (2004). Soil Carbon Sequestration Impacts on Global Climate Change and Food Security. Science 304(5677).", "relevance": "Loss of soil organic matter undermines structure and water/nutrient retention independently of mineral inputs."},
+        {"concept": "Diminishing marginal returns to inputs", "from_domain": "economics", "source": "Mundlak, Y. (2001). Production and Supply. In Handbook of Agricultural Economics, Vol. 1, Elsevier.", "relevance": "The production-function view explains why holding an input mix fixed yields falling returns as other factors degrade."}
+      ]
+    },
+    {
+      "id": "portfolio_risk",
+      "frame_domain": "quantitative finance",
+      "domain_pair": "finance -> statistical physics / cognitive psychology",
+      "problem_statement": "My portfolio's risk model uses volatility and correlations estimated from historical returns, yet it badly underestimates the frequency of large crashes. As a quant I assume roughly normal returns. I want to understand why extreme losses occur far more often than my model predicts. What am I missing?",
+      "frame_concepts": ["volatility", "correlation matrix", "Value at Risk", "Sharpe ratio", "normal distribution of returns", "diversification"],
+      "ground_truth": [
+        {"concept": "Heavy-tailed (power-law) return distributions", "from_domain": "econophysics / statistical physics", "source": "Mandelbrot, B. (1963). The Variation of Certain Speculative Prices. Journal of Business 36(4).", "relevance": "Price changes follow fat-tailed, scale-invariant distributions, so Gaussian variance drastically understates extreme-event probability."},
+        {"concept": "Reflexivity / feedback-driven instability", "from_domain": "complex systems / sociology of markets", "source": "Soros, G. (1987). The Alchemy of Finance. Simon & Schuster.", "relevance": "Participants' beliefs change the fundamentals they observe, producing self-reinforcing booms and crashes absent from equilibrium risk models."},
+        {"concept": "Prospect theory / loss aversion", "from_domain": "cognitive psychology", "source": "Kahneman, D. & Tversky, A. (1979). Prospect Theory: An Analysis of Decision Under Risk. Econometrica 47(2).", "relevance": "Investor behavior under losses (panic selling, herding) generates the very tail co-movements the statistical model treats as exogenous."}
+      ]
+    },
+    {
+      "id": "neighborhood_crime",
+      "frame_domain": "policing and criminology",
+      "domain_pair": "criminology -> urban design / public health",
+      "problem_statement": "Burglaries cluster in a few blocks of my district. As a police commander I deploy patrols and make arrests, but the hotspots persist after I move resources elsewhere. I want to understand the environmental and structural drivers that keep these places crime-prone. What approaches lie outside enforcement?",
+      "frame_concepts": ["patrol", "arrest", "crime hotspot", "deterrence", "police deployment", "recidivism"],
+      "ground_truth": [
+        {"concept": "Crime Prevention Through Environmental Design (CPTED)", "from_domain": "urban design / architecture", "source": "Jeffery, C.R. (1971). Crime Prevention Through Environmental Design. Sage.", "relevance": "Physical layout, lighting, sightlines and territoriality reduce opportunity for crime without enforcement."},
+        {"concept": "Routine activity theory", "from_domain": "environmental criminology", "source": "Cohen, L. & Felson, M. (1979). Social Change and Crime Rate Trends: A Routine Activity Approach. American Sociological Review 44(4).", "relevance": "Crime requires the convergence of motivated offender, suitable target, and absent guardian; altering any vertex prevents it."},
+        {"concept": "Violence as a public-health epidemic (contagion)", "from_domain": "public health / epidemiology", "source": "Slutkin, G. (2013). Violence Is a Contagious Disease. In Contagion of Violence, National Academies Press.", "relevance": "Violence spreads like an infectious process; interruption and behavior-change methods outperform deterrence in hotspots."}
+      ]
+    },
+    {
+      "id": "bridge_collapse",
+      "frame_domain": "structural engineering",
+      "domain_pair": "structural engineering -> aerodynamics / materials science",
+      "problem_statement": "I am designing a long-span suspension footbridge. As a structural engineer I size members for dead load, live load and a static wind pressure with safety factors. A colleague warns my static analysis is dangerously incomplete for a slender deck. What failure mechanisms am I not accounting for?",
+      "frame_concepts": ["dead load", "live load", "safety factor", "static wind pressure", "member sizing", "stress and yield strength"],
+      "ground_truth": [
+        {"concept": "Aeroelastic flutter", "from_domain": "aerodynamics", "source": "Billah, K. & Scanlan, R. (1991). Resonance, Tacoma Narrows Bridge Failure, and Undergraduate Physics Textbooks. American Journal of Physics 59(2).", "relevance": "Wind-structure coupling can drive self-excited torsional oscillations that destroy a deck a static wind analysis deems safe (Tacoma Narrows)."},
+        {"concept": "Vortex-induced vibration", "from_domain": "fluid dynamics", "source": "Simiu, E. & Scanlan, R. (1996). Wind Effects on Structures, 3rd ed. Wiley.", "relevance": "Periodic vortex shedding can lock in with a structure's natural frequency and cause fatigue or large oscillations under steady wind."},
+        {"concept": "Pedestrian-induced lateral lock-in (synchronous excitation)", "from_domain": "biomechanics / dynamics", "source": "Dallard, P. et al. (2001). The London Millennium Footbridge. The Structural Engineer 79(22).", "relevance": "Crowd footfall can synchronize with small lateral sway and amplify it, a load case absent from static live-load thinking."}
+      ]
+    },
+    {
+      "id": "startup_growth",
+      "frame_domain": "product marketing",
+      "domain_pair": "marketing -> sociology / network economics",
+      "problem_statement": "My SaaS product has a good conversion funnel but growth has plateaued. As a marketer I optimize ad spend, landing pages and email campaigns. I want to understand the structural reasons adoption stalls after early customers, beyond funnel tactics. What dynamics govern this?",
+      "frame_concepts": ["conversion funnel", "ad spend", "landing page", "customer acquisition cost", "email campaign", "click-through rate"],
+      "ground_truth": [
+        {"concept": "Diffusion of innovations / chasm between early adopters and majority", "from_domain": "sociology", "source": "Rogers, E. (2003). Diffusion of Innovations, 5th ed. Free Press.", "relevance": "Adoption follows social-system categories; the early-adopter-to-majority transition is a structural barrier no funnel tweak addresses."},
+        {"concept": "Network effects / critical mass", "from_domain": "network economics", "source": "Katz, M. & Shapiro, C. (1985). Network Externalities, Competition, and Compatibility. American Economic Review 75(3).", "relevance": "When a product's value rises with its user base, growth is governed by reaching critical mass, not acquisition efficiency."},
+        {"concept": "Social contagion / complex contagion thresholds", "from_domain": "sociology of networks", "source": "Centola, D. & Macy, M. (2007). Complex Contagions and the Weakness of Long Ties. American Journal of Sociology 113(3).", "relevance": "Adoption of behaviors requiring social reinforcement spreads only when local network thresholds are met, shaping plateaus."}
+      ]
+    },
+    {
+      "id": "chronic_back_pain",
+      "frame_domain": "orthopedics / musculoskeletal medicine",
+      "domain_pair": "orthopedics -> pain neuroscience / health psychology",
+      "problem_statement": "A patient has chronic low back pain but imaging shows only minor age-typical changes. As an orthopedic clinician I focus on structural causes (discs, joints, alignment) and prescribe physical correction. The pain persists and seems disproportionate to the anatomy. What mechanisms outside the structural model could explain this?",
+      "frame_concepts": ["disc degeneration", "spinal alignment", "MRI imaging", "physical therapy", "joint mechanics", "anti-inflammatory medication"],
+      "ground_truth": [
+        {"concept": "Central sensitization", "from_domain": "pain neuroscience", "source": "Woolf, C. (2011). Central Sensitization: Implications for the Diagnosis and Treatment of Pain. Pain 152(3 Suppl).", "relevance": "Amplified central nervous system signaling produces pain decoupled from peripheral tissue damage, explaining pain out of proportion to imaging."},
+        {"concept": "Fear-avoidance model", "from_domain": "health psychology", "source": "Vlaeyen, J. & Linton, S. (2000). Fear-Avoidance and Its Consequences in Chronic Musculoskeletal Pain. Pain 85(3).", "relevance": "Pain-related fear drives avoidance, deconditioning and disability, sustaining chronic pain through a psychological loop."},
+        {"concept": "Biopsychosocial model of pain", "from_domain": "behavioral medicine", "source": "Engel, G. (1977). The Need for a New Medical Model: A Challenge for Biomedicine. Science 196(4286).", "relevance": "Outcomes depend on biological, psychological and social factors jointly; a purely structural model is incomplete by design."}
+      ]
+    },
+    {
+      "id": "building_energy",
+      "frame_domain": "building/HVAC engineering",
+      "domain_pair": "mechanical engineering -> behavioral economics / environmental psychology",
+      "problem_statement": "An office building I manage uses far more energy than its efficient equipment predicts. As a building engineer I have installed high-efficiency HVAC, LED lighting and smart thermostats, yet consumption stays high. I want to understand the gap between engineered efficiency and actual use. What drives it?",
+      "frame_concepts": ["HVAC efficiency", "thermostat setpoint", "insulation R-value", "LED lighting", "energy audit", "building envelope"],
+      "ground_truth": [
+        {"concept": "Rebound effect (Jevons paradox)", "from_domain": "energy economics", "source": "Sorrell, S. (2009). Jevons' Paradox Revisited: The Evidence for Backfire from Improved Energy Efficiency. Energy Policy 37(4).", "relevance": "Efficiency lowers the effective price of energy services, increasing use and offsetting part of the engineered savings."},
+        {"concept": "Occupant behavior and social norms in energy use", "from_domain": "environmental psychology", "source": "Schultz, P.W. et al. (2007). The Constructive, Destructive, and Reconstructive Power of Social Norms. Psychological Science 18(5).", "relevance": "Normative feedback changes occupant behavior, which dominates the performance gap that equipment ratings ignore."},
+        {"concept": "Principal-agent / split incentives", "from_domain": "economics", "source": "Jaffe, A. & Stavins, R. (1994). The Energy-Efficiency Gap: What Does It Mean? Energy Policy 22(10).", "relevance": "When the party paying for efficiency is not the one paying the bills, investment and behavior misalign, sustaining waste."}
+      ]
+    },
+    {
+      "id": "team_decisions",
+      "frame_domain": "management / leadership",
+      "domain_pair": "management -> social psychology / forecasting science",
+      "problem_statement": "My senior leadership team keeps making confident decisions that turn out badly. As a manager I recruit smart people, set clear agendas and encourage discussion. Yet the group converges quickly and misses obvious risks. What group-level mechanisms cause this and how can they be countered?",
+      "frame_concepts": ["leadership", "meeting agenda", "team alignment", "decision-making process", "delegation", "KPIs"],
+      "ground_truth": [
+        {"concept": "Groupthink", "from_domain": "social psychology", "source": "Janis, I. (1972). Victims of Groupthink. Houghton Mifflin.", "relevance": "Cohesive groups suppress dissent and reality-testing, producing overconfident, poorly examined decisions."},
+        {"concept": "Premortem / prospective hindsight", "from_domain": "judgment and decision-making", "source": "Klein, G. (2007). Performing a Project Premortem. Harvard Business Review 85(9).", "relevance": "Imagining the decision has already failed surfaces risks that consensus-seeking discussion hides."},
+        {"concept": "Wisdom of crowds / independent aggregation", "from_domain": "forecasting science", "source": "Surowiecki, J. (2004). The Wisdom of Crowds. Doubleday.", "relevance": "Accurate group judgment requires independence and diversity; interacting teams lose these and converge on error."}
+      ]
+    },
+    {
+      "id": "forest_fire",
+      "frame_domain": "forestry / fire suppression",
+      "domain_pair": "forestry -> ecology / complex systems",
+      "problem_statement": "The region I manage suffers increasingly severe wildfires. As a forestry official my policy has been to suppress every fire as fast as possible. Despite this, the fires that escape are larger and more destructive than decades ago. Why might aggressive suppression be backfiring?",
+      "frame_concepts": ["fire suppression", "firebreak", "fuel load", "controlled burn", "fire crew deployment", "forest management"],
+      "ground_truth": [
+        {"concept": "Fire-adapted ecosystems and the role of disturbance", "from_domain": "ecology", "source": "Bond, W. & Keeley, J. (2005). Fire as a Global Herbivore: The Ecology and Evolution of Flammable Ecosystems. Trends in Ecology & Evolution 20(7).", "relevance": "Many ecosystems require periodic fire; suppression removes a natural process and changes vegetation toward more hazardous states."},
+        {"concept": "Self-organized criticality", "from_domain": "complex systems physics", "source": "Bak, P. (1996). How Nature Works: The Science of Self-Organized Criticality. Springer.", "relevance": "Suppressing small fires builds fuel correlations so the size distribution shifts toward rare catastrophic events."},
+        {"concept": "Fire suppression paradox / fuel accumulation", "from_domain": "fire ecology", "source": "Arno, S. & Brown, J. (1991). Overcoming the Paradox in Managing Wildland Fire. Western Wildlands 17(1).", "relevance": "Decades of suppression accumulate fuels, guaranteeing that escaped fires burn hotter and larger."}
+      ]
+    },
+    {
+      "id": "exam_fairness",
+      "frame_domain": "educational assessment",
+      "domain_pair": "education -> psychometrics / measurement theory",
+      "problem_statement": "I write and grade exams for a large course. As an instructor I count correct answers and curve the totals. Colleagues say my scores are not comparable across exam versions and may be unfair to some students. What measurement principles am I ignoring?",
+      "frame_concepts": ["exam questions", "grading", "raw score", "curving", "answer key", "pass mark"],
+      "ground_truth": [
+        {"concept": "Item Response Theory", "from_domain": "psychometrics", "source": "Hambleton, R., Swaminathan, H. & Rogers, H. (1991). Fundamentals of Item Response Theory. Sage.", "relevance": "Models the probability of a correct response as a function of latent ability and item difficulty/discrimination, enabling comparable scoring across forms."},
+        {"concept": "Differential item functioning (measurement bias)", "from_domain": "educational measurement", "source": "Holland, P. & Wainer, H. (1993). Differential Item Functioning. Lawrence Erlbaum.", "relevance": "Items can function differently across subgroups of equal ability, a fairness threat invisible to raw-score counting."},
+        {"concept": "Reliability and validity theory", "from_domain": "measurement theory", "source": "Cronbach, L. & Meehl, P. (1955). Construct Validity in Psychological Tests. Psychological Bulletin 52(4).", "relevance": "Scores must be shown to consistently and validly measure the intended construct, not merely be summed and curved."}
+      ]
+    },
+    {
+      "id": "traffic_deaths",
+      "frame_domain": "road safety engineering",
+      "domain_pair": "road safety -> public health / systems safety",
+      "problem_statement": "Fatal crashes on roads in my jurisdiction remain stubbornly high. As a road safety engineer I focus on driver error: enforcement, signage, and education campaigns to make drivers behave. Fatalities barely move. What alternative framings of the problem exist?",
+      "frame_concepts": ["driver error", "speed enforcement", "road signage", "driver education", "seatbelt compliance", "accident blackspot"],
+      "ground_truth": [
+        {"concept": "Haddon matrix", "from_domain": "injury epidemiology / public health", "source": "Haddon, W. (1972). A Logical Framework for Categorizing Highway Safety Phenomena and Activity. Journal of Trauma 12(3).", "relevance": "Analyzes pre-crash, crash and post-crash phases across host, agent and environment, moving beyond blaming the driver."},
+        {"concept": "Safe System / Vision Zero", "from_domain": "systems safety", "source": "Belin, M-Å., Tillgren, P. & Vedung, E. (2012). Vision Zero – a Road Safety Policy Innovation. International Journal of Injury Control and Safety Promotion 19(2).", "relevance": "Designs the system to be forgiving of inevitable human error so mistakes do not become fatalities, rejecting error-elimination as the sole lever."},
+        {"concept": "Energy-damage model of injury", "from_domain": "injury prevention science", "source": "Gibson, J.J. (1961). The Contribution of Experimental Psychology to the Formulation of the Problem of Safety. Behavioral Approaches to Accident Research.", "relevance": "Injury results from harmful energy transfer; managing crash energy (not just behavior) prevents deaths."}
+      ]
+    },
+    {
+      "id": "committee_choice",
+      "frame_domain": "political science / governance",
+      "domain_pair": "political science -> economics / mathematics",
+      "problem_statement": "A committee I chair produces collective decisions that seem incoherent: it prefers A to B, B to C, yet C to A depending on agenda order. As a governance specialist I assume a fair voting procedure yields the group's true preference. What formal results explain why this keeps failing?",
+      "frame_concepts": ["voting procedure", "majority rule", "committee", "agenda", "consensus", "ballot"],
+      "ground_truth": [
+        {"concept": "Arrow's impossibility theorem", "from_domain": "social choice theory / economics", "source": "Arrow, K. (1951). Social Choice and Individual Values. Wiley.", "relevance": "No voting rule can satisfy a small set of reasonable fairness conditions simultaneously; collective coherence is mathematically unattainable in general."},
+        {"concept": "Condorcet paradox (cyclic majorities)", "from_domain": "mathematics of voting", "source": "Condorcet, M. (1785). Essai sur l'application de l'analyse à la probabilité des décisions rendues à la pluralité des voix.", "relevance": "Pairwise majority preferences can cycle even when individuals are rational, exactly the A>B>C>A pattern observed."},
+        {"concept": "Agenda manipulation / strategic voting", "from_domain": "public choice economics", "source": "McKelvey, R. (1976). Intransitivities in Multidimensional Voting Models and Some Implications for Agenda Control. Journal of Economic Theory 12(3).", "relevance": "Whoever controls the order of votes can engineer almost any outcome, so process design dominates 'true' preference."}
+      ]
+    },
+    {
+      "id": "food_spoilage",
+      "frame_domain": "food science / food processing",
+      "domain_pair": "food science -> microbiology / physical chemistry",
+      "problem_statement": "A packaged food product I developed spoils faster than its shelf-life target despite refrigeration. As a food technologist I focus on recipe, packaging seal and storage temperature. I want the underlying determinants of microbial and chemical stability that I should be controlling. What governs shelf life at a mechanistic level?",
+      "frame_concepts": ["shelf life", "refrigeration", "packaging seal", "preservatives", "storage temperature", "recipe formulation"],
+      "ground_truth": [
+        {"concept": "Water activity (a_w)", "from_domain": "physical chemistry", "source": "Labuza, T. (1980). The Effect of Water Activity on Reaction Kinetics of Food Deterioration. Food Technology 34(4).", "relevance": "Available water, not total moisture or temperature, controls microbial growth and reaction rates; it is the master variable for stability."},
+        {"concept": "Predictive microbiology / microbial growth kinetics", "from_domain": "microbiology", "source": "McMeekin, T. et al. (1993). Predictive Microbiology: Theory and Application. Research Studies Press.", "relevance": "Growth of spoilage organisms follows quantifiable kinetics in temperature/pH/a_w space, enabling mechanistic shelf-life prediction."},
+        {"concept": "Maillard and lipid-oxidation reaction kinetics", "from_domain": "food chemistry", "source": "Labuza, T. & Saltmarch, M. (1981). The Nonenzymatic Browning Reaction as Affected by Water in Foods. In Water Activity: Influences on Food Quality, Academic Press.", "relevance": "Chemical deterioration (browning, rancidity) proceeds independent of microbes and sets quality limits a packaging focus misses."}
+      ]
+    },
+    {
+      "id": "coral_decline",
+      "frame_domain": "marine biology / reef conservation",
+      "domain_pair": "marine biology -> ocean chemistry / thermodynamics",
+      "problem_statement": "Coral cover on a reef I study is declining even though I have curbed local overfishing and pollution. As a reef biologist I focus on biological stressors and predators. The corals are bleaching and dissolving in ways my local interventions cannot stop. What non-biological processes are driving this?",
+      "frame_concepts": ["coral cover", "overfishing", "reef predators", "marine protected area", "coral disease", "algae competition"],
+      "ground_truth": [
+        {"concept": "Ocean acidification and aragonite saturation", "from_domain": "ocean chemistry", "source": "Hoegh-Guldberg, O. et al. (2007). Coral Reefs Under Rapid Climate Change and Ocean Acidification. Science 318(5857).", "relevance": "Rising CO2 lowers carbonate saturation so corals cannot calcify; a chemical driver invisible to fishing/pollution management."},
+        {"concept": "Thermal stress and the breakdown of symbiosis (bleaching)", "from_domain": "thermal physiology / thermodynamics", "source": "Hoegh-Guldberg, O. (1999). Climate Change, Coral Bleaching and the Future of the World's Coral Reefs. Marine and Freshwater Research 50(8).", "relevance": "Small temperature anomalies disrupt the coral-zooxanthellae symbiosis, a global thermal driver beyond any local lever."},
+        {"concept": "Regime shifts / alternative stable states", "from_domain": "complex systems ecology", "source": "Scheffer, M. et al. (2001). Catastrophic Shifts in Ecosystems. Nature 413(6856).", "relevance": "Reefs can flip abruptly to algae-dominated stable states and resist recovery, so gradual local effort fails past a tipping point."}
+      ]
+    },
+    {
+      "id": "warehouse_throughput",
+      "frame_domain": "industrial / mechanical engineering",
+      "domain_pair": "industrial engineering -> management theory / queueing science",
+      "problem_statement": "My warehouse fulfilment line is slower than its machine specs imply. As an industrial engineer I speed up individual stations and buy faster equipment, but total throughput barely improves and inventory piles up between stations. What systemic principles explain why local speedups don't help?",
+      "frame_concepts": ["throughput", "station cycle time", "conveyor speed", "equipment capacity", "automation", "line balancing"],
+      "ground_truth": [
+        {"concept": "Theory of constraints / bottleneck dominance", "from_domain": "operations management", "source": "Goldratt, E. (1984). The Goal: A Process of Ongoing Improvement. North River Press.", "relevance": "System throughput is set by the single bottleneck; optimizing non-bottleneck stations only grows inventory, not output."},
+        {"concept": "Little's Law", "from_domain": "queueing theory", "source": "Little, J. (1961). A Proof for the Queuing Formula L = λW. Operations Research 9(3).", "relevance": "Work-in-progress equals throughput times flow time, a conservation law that explains pile-ups and bounds achievable speed."},
+        {"concept": "Variability and the Kingman formula", "from_domain": "queueing science", "source": "Kingman, J.F.C. (1961). The Single Server Queue in Heavy Traffic. Mathematical Proceedings of the Cambridge Philosophical Society 57(4).", "relevance": "Waiting time explodes with variability as utilization nears one, so reducing variation matters more than raw speed."}
+      ]
+    },
+    {
+      "id": "language_learning",
+      "frame_domain": "language teaching / pedagogy",
+      "domain_pair": "education -> cognitive neuroscience / linguistics",
+      "problem_statement": "Adult students in my language course plateau despite diligent vocabulary drills and grammar exercises. As a teacher I add more practice and correction. Their speaking fluency and accent stop improving regardless. What mechanisms outside drill-based pedagogy explain this ceiling?",
+      "frame_concepts": ["vocabulary drills", "grammar exercises", "error correction", "lesson plan", "homework practice", "language proficiency test"],
+      "ground_truth": [
+        {"concept": "Critical/sensitive period and neural plasticity", "from_domain": "cognitive neuroscience", "source": "Lenneberg, E. (1967). Biological Foundations of Language. Wiley.", "relevance": "Age-related decline in neural plasticity constrains attainment (especially phonology), a biological ceiling no drilling removes."},
+        {"concept": "Comprehensible input hypothesis", "from_domain": "second-language acquisition theory", "source": "Krashen, S. (1985). The Input Hypothesis: Issues and Implications. Longman.", "relevance": "Acquisition is driven by meaningful input slightly beyond current level, not by conscious drill of forms."},
+        {"concept": "Automaticity and skill acquisition (proceduralization)", "from_domain": "cognitive psychology", "source": "DeKeyser, R. (2007). Skill Acquisition Theory. In Theories in Second Language Acquisition, Routledge.", "relevance": "Fluency requires proceduralizing declarative knowledge through communicative use; explicit practice alone leaves knowledge inert."}
+      ]
+    }
+  ]
+}

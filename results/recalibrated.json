@@ -1,0 +1,282 @@
+{
+  "tier_bounds": {
+    "q33": 0.2947,
+    "q67": 0.3375,
+    "max_distance": 0.4383
+  },
+  "tiers": {
+    "anthropic/claude-sonnet-4-5|A": {
+      "T1_near": {
+        "recall": 1.0,
+        "n": 22
+      },
+      "T2_mid": {
+        "recall": 0.913,
+        "n": 23
+      },
+      "T3_far": {
+        "recall": 0.409,
+        "n": 22
+      }
+    },
+    "anthropic/claude-sonnet-4-5|B": {
+      "T1_near": {
+        "recall": 1.0,
+        "n": 11
+      },
+      "T2_mid": {
+        "recall": 1.0,
+        "n": 12
+      },
+      "T3_far": {
+        "recall": 0.786,
+        "n": 14
+      }
+    },
+    "openai/gpt-4o|A": {
+      "T1_near": {
+        "recall": 1.0,
+        "n": 9
+      },
+      "T2_mid": {
+        "recall": 0.25,
+        "n": 4
+      },
+      "T3_far": {
+        "recall": 0.333,
+        "n": 6
+      }
+    }
+  },
+  "strong_efa_test": {
+    "anthropic/claude-sonnet-4-5": {
+      "n_top_tier_pairs": 14,
+      "recall_A_top_tier": 0.429,
+      "recall_B_top_tier": 0.786,
+      "interpretation": "B recovers far concepts -> weak/correctable"
+    }
+  },
+  "top_tier_concepts": [
+    {
+      "problem_id": "traffic_deaths",
+      "concept": "Haddon matrix",
+      "distance": 0.4383,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": null,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "building_energy",
+      "concept": "Rebound effect (Jevons paradox)",
+      "distance": 0.4049,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": 1,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "antibiotic_resistance",
+      "concept": "Tragedy of the commons",
+      "distance": 0.4033,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": 1,
+      "gpt-4o_A": 0,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "traffic_deaths",
+      "concept": "Energy-damage model of injury",
+      "distance": 0.3997,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": null,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "forest_fire",
+      "concept": "Self-organized criticality",
+      "distance": 0.3906,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": null,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "startup_growth",
+      "concept": "Social contagion / complex contagion thresholds",
+      "distance": 0.3882,
+      "claude-sonnet-4-5_A": 1,
+      "claude-sonnet-4-5_B": 1,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "building_energy",
+      "concept": "Principal-agent / split incentives",
+      "distance": 0.3864,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": 0,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "coral_decline",
+      "concept": "Regime shifts / alternative stable states",
+      "distance": 0.3767,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": null,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "crop_yield",
+      "concept": "Diminishing marginal returns to inputs",
+      "distance": 0.3752,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": 0,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "traffic_congestion",
+      "concept": "Braess's paradox",
+      "distance": 0.3736,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": 1,
+      "gpt-4o_A": 0,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "antibiotic_resistance",
+      "concept": "Selection pressure and fitness landscapes",
+      "distance": 0.3735,
+      "claude-sonnet-4-5_A": 1,
+      "claude-sonnet-4-5_B": 1,
+      "gpt-4o_A": 1,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "employee_turnover",
+      "concept": "Efficiency wages",
+      "distance": 0.3714,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": 0,
+      "gpt-4o_A": 0,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "language_learning",
+      "concept": "Critical/sensitive period and neural plasticity",
+      "distance": 0.371,
+      "claude-sonnet-4-5_A": 1,
+      "claude-sonnet-4-5_B": null,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "chronic_back_pain",
+      "concept": "Fear-avoidance model",
+      "distance": 0.3654,
+      "claude-sonnet-4-5_A": 1,
+      "claude-sonnet-4-5_B": 1,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "chronic_back_pain",
+      "concept": "Biopsychosocial model of pain",
+      "distance": 0.3628,
+      "claude-sonnet-4-5_A": 1,
+      "claude-sonnet-4-5_B": 1,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "neighborhood_crime",
+      "concept": "Routine activity theory",
+      "distance": 0.3614,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": null,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "ml_overfit",
+      "concept": "Occam's razor / parsimony as an epistemic principle",
+      "distance": 0.3592,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": 1,
+      "gpt-4o_A": 0,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "bridge_collapse",
+      "concept": "Vortex-induced vibration",
+      "distance": 0.3567,
+      "claude-sonnet-4-5_A": 1,
+      "claude-sonnet-4-5_B": 1,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "committee_choice",
+      "concept": "Arrow's impossibility theorem",
+      "distance": 0.3469,
+      "claude-sonnet-4-5_A": 1,
+      "claude-sonnet-4-5_B": null,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "bridge_collapse",
+      "concept": "Aeroelastic flutter",
+      "distance": 0.345,
+      "claude-sonnet-4-5_A": 1,
+      "claude-sonnet-4-5_B": 1,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "exam_fairness",
+      "concept": "Reliability and validity theory",
+      "distance": 0.3407,
+      "claude-sonnet-4-5_A": 1,
+      "claude-sonnet-4-5_B": null,
+      "gpt-4o_A": null,
+      "gpt-4o_B": null
+    },
+    {
+      "problem_id": "hospital_readmission",
+      "concept": "Social determinants of health",
+      "distance": 0.338,
+      "claude-sonnet-4-5_A": 0,
+      "claude-sonnet-4-5_B": 1,
+      "gpt-4o_A": 1,
+      "gpt-4o_B": null
+    }
+  ],
+  "residual_B": {
+    "anthropic/claude-sonnet-4-5": [
+      {
+        "problem_id": "building_energy",
+        "concept": "Principal-agent / split incentives",
+        "distance": 0.3864,
+        "tier": "T3_far"
+      },
+      {
+        "problem_id": "crop_yield",
+        "concept": "Diminishing marginal returns to inputs",
+        "distance": 0.3752,
+        "tier": "T3_far"
+      },
+      {
+        "problem_id": "employee_turnover",
+        "concept": "Efficiency wages",
+        "distance": 0.3714,
+        "tier": "T3_far"
+      }
+    ],
+    "openai/gpt-4o": []
+  }
+}
