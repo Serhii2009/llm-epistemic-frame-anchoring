@@ -1,6 +1,6 @@
 # Epistemic Frame Anchoring (EFA)
 
-This repo investigates a specific way LLMs fall short: they tend to answer from *inside*
+This repo investigates a specific way LLMs fall short: they tend to answer from _inside_
 the conceptual frame your prompt sets, and quietly under-cover genuinely relevant concepts
 that live in distant fields. The project tested whether that gap is a **structural absence**
 (unreachable without new architecture) or just a prompting gap. The honest finding is a
@@ -8,7 +8,7 @@ that live in distant fields. The project tested whether that gap is a **structur
 but a single generic "look wider" prompt recovers most of what the naive prompt misses, so
 the gap is mostly prompt-correctable, not architectural.
 
-📄 **Full write-up (the story, the experiment, the verdict):** [`efa-research-article.md`](efa-research-article.md)
+📄 **Full write-up (the story, the experiment, the verdict):** [`LinkedIn Article`](https://www.linkedin.com/pulse/my-first-ai-research-project-17-epistemic-frame-efa-why-kravchenko-y59sf)
 
 > This is **research code, not a production library.** It exists to make the experiment in
 > the article reproducible, and the parts that didn't work out are left in on purpose.
@@ -22,7 +22,7 @@ the gap is mostly prompt-correctable, not architectural.
   Generator, Parallel Epistemic Sampler, Concept Delta Extractor, Causal Structure Probe,
   Coverage-Aware Synthesis) plus an evaluation-only verifier (`pipeline/verify.py`).
 - `efa/dtg/` + `data/dtg_300.json` — the Domain Topology Graph, the one component that
-  operates *outside* the prompt's frame.
+  operates _outside_ the prompt's frame.
 - `bench/efa_bench.json` + `bench/SOURCES.md` — the benchmark: ~20 problems, each with
   source-cited outside-frame concepts.
 - `experiments/` — the falsification study that produced the article's results
